@@ -2127,3 +2127,26 @@ section {
     aspect-ratio: 16 / 10;
   }
 }
+
+/* MAKE ALL CAROUSEL IMAGES THE SAME SIZE */
+.inside-gallery > .inside-item {
+  flex: 0 0 38%;
+  width: auto;
+  min-width: 0;
+  grid-row: auto;
+  grid-column: auto;
+}
+
+.inside-gallery > .inside-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+@media (max-width: 650px) {
+  .inside-gallery > .inside-item {
+    flex-basis: 86%;
+  }
+}
