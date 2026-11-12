@@ -36,26 +36,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // A CLOSER LOOK: HORIZONTAL CAROUSEL
+  // A CLOSER LOOK: MOUSE DRAGGING
   const gallery = document.querySelector(".inside-gallery");
-  const previousButton = document.querySelector(".gallery-prev");
-  const nextButton = document.querySelector(".gallery-next");
 
   if (gallery) {
-    const scrollAmount = () => gallery.clientWidth * 0.8;
+    let isDragging = false;
+    let startX = 0;
+    let startScrollLeft = 0;
 
-    previousButton?.addEventListener("click", () => {
-      gallery.scrollBy({
-        left: -scrollAmount(),
-        behavior: "smooth"
-      });
+    gallery.addEventListener("pointerdown", event => {
+      if (event.pointerType !== "mouse" || event.button !== 0) return;
+
+      isDragging = true;
+      startX = event.clientX;
+      startScrollLeft = gallery.scrollLeft;
+      gallery.classList.add("is-dragging");
     });
 
-    nextButton?.addEventListener("click", () => {
-      gallery.scrollBy({
-        left: scrollAmount(),
-        behavior: "smooth"
-      });
+    window.addEventListener("pointermove", event => {
+      if (!isDragging) return;
+
+      const distance = event.clientX - startX;
+      gallery.scrollLeft = startScrollLeft - distance;
+    });
+
+    window.addEventListener("pointerup", () => {
+      isDragging = false;
+      gallery.classList.remove("is-dragging");
+    });
+
+    window.addEventListener("pointercancel", () => {
+      isDragging = false;
+      gallery.classList.remove("is-dragging");
     });
   }
 
