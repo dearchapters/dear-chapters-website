@@ -1,0 +1,34 @@
+
+/* DEAR CHAPTERS — BRAND COLOURS */
+
+:root {
+    --dusty-blush: #D7C2B7;
+    --rose-taupe: #987C75;
+    --burgundy: #754C50;
+    --plum-charcoal: #493B3D;
+    --warm-ivory: #F5F0E9;
+}
+
+/* GENERAL WEBSITE STYLE */
+
+body {
+    background-color: var(--warm-ivory);
+    color: var(--plum-charcoal);
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 40px;
+}
+
+/* MAIN HEADING */
+
+h1 {
+    color: var(--burgundy);
+    font-size: 48px;
+}
+
+/* PARAGRAPH */
+
+p {
+    color: var(--rose-taupe);
+    font-size: 18px;
+}
