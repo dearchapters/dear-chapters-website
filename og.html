@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>OG Edition — Dear Chapters</title>
+  <meta name="description" content="Discover the Dear Chapters OG Edition: a blush and beige digital planner for every chapter of your life.">
+  <meta name="theme-color" content="#FBF5F0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --og-bg: #FBF5F0;
+      --og-card: #FFFCFA;
+      --og-text: #4A3F44;
+      --og-muted: #9A8A8E;
+      --og-accent: #BF8587;
+      --og-line: rgba(74, 63, 68, 0.14);
+    }
+
+    body {
+      background: var(--og-bg);
+      color: var(--og-text);
+    }
+
+    .site-header {
+      background: rgba(251, 245, 240, 0.96);
+    }
+
+    .announcement {
+      background: var(--og-text);
+    }
+
+    .announcement span {
+      color: #DB9EAD;
+    }
+
+    .og-main {
+      max-width: 1440px;
+      margin: auto;
+      padding: 0 7%;
+    }
+
+    .og-breadcrumb {
+      padding: 27px 0;
+      color: var(--og-muted);
+      font-size: 9px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .og-breadcrumb a:hover {
+      color: var(--og-accent);
+    }
+
+    .og-hero {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      align-items: center;
+      gap: 9%;
+      padding: 45px 0 100px;
+    }
+
+    .og-cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 35px;
+      background: #F6E9E2;
+    }
+
+    .og-cover {
+      width: 100%;
+      max-width: 510px;
+      max-height: 660px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .og-cover-caption {
+      margin-top: 15px;
+      color: var(--og-muted);
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .og-copy .eyebrow {
+      color: #8F7474;
+    }
+
+    .og-copy h1 {
+      margin: 23px 0 10px;
+      color: var(--og-text);
+      font-family: var(--serif);
+      font-size: clamp(55px, 6vw, 82px);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -2px;
+    }
+
+    .og-subtitle {
+      margin: 0 0 27px;
+      color: var(--og-accent);
+      font-family: var(--serif);
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    .og-description {
+      max-width: 410px;
+      color: var(--og-muted);
+      font-size: 11px;
+      line-height: 2.2;
+    }
+
+    .og-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 30px;
+      color: var(--og-muted);
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    .og-note::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--og-accent);
+    }
+
+    .og-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 34px;
+    }
+
+    .og-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      min-height: 48px;
+      padding: 13px 22px;
+      border: 1px solid var(--og-accent);
+      background: var(--og-accent);
+      color: white;
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      transition: 0.25s ease;
+    }
+
+    .og-button:hover {
+      background: #8F7474;
+      border-color: #8F7474;
+    }
+
+    .og-button-secondary {
+      background: transparent;
+      color: #8F7474;
+    }
+
+    .og-button-secondary:hover {
+      background: var(--og-card);
+      color: var(--og-text);
+    }
+
+    .og-divider {
+      height: 1px;
+      background: var(--og-line);
+    }
+
+    .og-section {
+      padding: 90px 0;
+    }
+
+    .og-section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+
+    .og-section-heading h2 {
+      margin: 15px 0 0;
+      color: var(--og-text);
+      font-family: var(--serif);
+      font-size: clamp(39px, 4.5vw, 60px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .og-section-heading h2 em {
+      color: var(--og-accent);
+      font-weight: 400;
+    }
+
+    .og-section-heading p {
+      max-width: 260px;
+      margin: 0;
+      color: var(--og-muted);
+      font-size: 10px;
+      line-height: 2;
+    }
+
+    .og-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 45px 28px;
+    }
+
+    .og-preview-card {
+      min-width: 0;
+    }
+
+    .og-preview-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 220px;
+      padding: 18px;
+      overflow: hidden;
+      background: var(--og-card);
+      border: 1px solid rgba(74, 63, 68, 0.06);
+    }
+
+    .og-preview-image img {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .og-preview-caption {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      padding-top: 17px;
+    }
+
+    .og-preview-number {
+      padding-top: 5px;
+      color: var(--og-accent);
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+
+    .og-preview-caption h3 {
+      margin: 0;
+      color: var(--og-text);
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    .og-preview-caption p {
+      margin: 3px 0 0;
+      color: var(--og-muted);
+      font-size: 10px;
+    }
+
+    .og-feature-strip {
+      padding: 65px 7%;
+      background: #F6E9E2;
+      text-align: center;
+    }
+
+    .og-feature-strip h2 {
+      margin: 15px 0;
+      color: var(--og-text);
+      font-family: var(--serif);
+      font-size: clamp(35px, 4vw, 52px);
+      font-weight: 400;
+    }
+
+    .og-feature-strip h2 em {
+      color: var(--og-accent);
+    }
+
+    .og-feature-strip p {
+      max-width: 520px;
+      margin: auto;
+      color: #85777A;
+      font-size: 10px;
+      line-height: 2.1;
+    }
+
+    .og-purchase {
+      padding: 95px 0 110px;
+      text-align: center;
+    }
+
+    .og-purchase h2 {
+      margin: 17px 0;
+      color: var(--og-text);
+      font-family: var(--serif);
+      font-size: clamp(42px, 5vw, 65px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .og-purchase h2 em {
+      color: var(--og-accent);
+    }
+
+    .og-purchase p {
+      max-width: 440px;
+      margin: 0 auto 25px;
+      color: var(--og-muted);
+      font-size: 10px;
+      line-height: 2;
+    }
+
+    .og-coming-soon {
+      margin-top: 17px;
+      color: var(--og-muted);
+      font-size: 8px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .og-footer {
+      padding: 28px 7%;
+      border-top: 1px solid var(--og-line);
+    }
+
+    .og-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    .og-footer p {
+      margin: 0;
+      color: var(--og-muted);
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    .og-footer a {
+      color: #8F7474;
+      font-size: 9px;
+    }
+
+    @media (max-width: 800px) {
+      .og-hero {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 25px 0 70px;
+      }
+
+      .og-cover-wrap {
+        padding: 20px;
+      }
+
+      .og-cover {
+        max-height: 530px;
+      }
+
+      .og-copy {
+        text-align: center;
+      }
+
+      .og-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .og-note,
+      .og-actions {
+        justify-content: center;
+      }
+
+      .og-section {
+        padding: 65px 0;
+      }
+
+      .og-section-heading {
+        display: block;
+      }
+
+      .og-section-heading p {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .og-main {
+        padding: 0 5%;
+      }
+
+      .og-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .og-preview-image {
+        min-height: 160px;
+        padding: 12px;
+      }
+
+      .og-preview-image img {
+        max-height: 380px;
+      }
+
+      .og-footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    THE 2027 COLLECTION <span>✳</span> MAKE ROOM FOR EVERY CHAPTER
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-name">Dear Chapters</span>
+        <span class="brand-subtitle">MAKE ROOM FOR EVERY CHAPTER</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#editions">The editions</a>
+        <a href="#previews">Inside the planner</a>
+        <a href="index.html#story">Our story</a>
+        <a href="index.html#faq">FAQs</a>
+      </nav>
+
+      <a href="#purchase" class="nav-cta">
+        Explore OG Edition <span>↗</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <div class="og-main">
+
+      <div class="og-breadcrumb">
+        <a href="index.html">Home</a>
+        &nbsp; / &nbsp;
+        <a href="index.html#editions">The Collection</a>
+        &nbsp; / &nbsp;
+        OG Edition
+      </div>
+
+      <!-- OG HERO -->
+      <section class="og-hero">
+
+        <div>
+          <div class="og-cover-wrap">
+            <img
+              class="og-cover"
+              src="assets/products/og-preview.jpg"
+              alt="Dear Chapters OG Edition blush and beige planner cover"
+            >
+          </div>
+          <p class="og-cover-caption">
+            The original Dear Chapters aesthetic.
+          </p>
+        </div>
+
+        <div class="og-copy">
+
+          <span class="eyebrow">
+            01 / THE SIGNATURE EDITION
+          </span>
+
+          <h1>OG<br>Edition.</h1>
+
+          <p class="og-subtitle">
+            Original. Thoughtful. Timeless.
+          </p>
+
+          <p class="og-description">
+            A soft blush-and-beige planning space designed
+            to bring every part of your life together.
+            From your yearly intentions to the little details
+            of everyday living, make room for every chapter.
+          </p>
+
+          <div class="og-note">
+            BLUSH & BEIGE · THE ORIGINAL PALETTE
+          </div>
+
+          <div class="og-actions">
+            <a href="#previews" class="og-button">
+              Explore the pages <span>↓</span>
+            </a>
+
+            <a href="index.html#editions" class="og-button og-button-secondary">
+              All editions <span>↗</span>
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+      <div class="og-divider"></div>
+
+      <!-- INTERIOR PREVIEWS -->
+      <section class="og-section" id="previews">
+
+        <div class="section-topline">
+          <span class="eyebrow">02 / INSIDE THE OG EDITION</span>
+          <span class="section-side-note">A CLOSER LOOK AT THE PAGES</span>
+        </div>
+
+        <div class="og-section-heading">
+          <div>
+            <h2>A little room<br>for <em>everything.</em></h2>
+          </div>
+
+          <p>
+            Explore a selection of the pages
+            that make up the OG planning experience.
+          </p>
+        </div>
+
+        <div class="og-preview-grid">
+
+          <article class="og-preview-card">
+            <div class="og-preview-image">
+              <img
+                src="assets/products/start-preview.jpg"
+                alt="OG Edition Start planner pages"
+                loading="lazy"
+              >
+            </div>
+            <div class="og-preview-caption">
+              <span class="og-preview-number">01</span>
+              <div>
+                <h3>Start</h3>
+                <p>A place to begin with intention.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="og-preview-card">
+            <div class="og-preview-image">
+              <img
+                src="assets/products/year-preview.jpg"
+                alt="OG Edition yearly planning pages"
+                loading="lazy"
+              >
+            </div>
+            <div class="og-preview-caption">
+              <span class="og-preview-number">02</span>
+              <div>
+                <h3>Year</h3>
+                <p>See the bigger picture.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="og-preview-card">
+            <div class="og-preview-image">
+              <img
+                src="assets/products/cycle-preview.jpg"
+                alt="OG Edition monthly and weekly planning pages"
+                loading="lazy"
+              >
+            </div>
+            <div class="og-preview-caption">
+              <span class="og-preview-number">03</span>
+              <div>
+                <h3>Planning Cycles</h3>
+                <p>Bring your days and weeks into focus.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="og-preview-card">
+            <div class="og-preview-image">
+              <img
+                src="assets/products/money-preview.jpg"
+                alt="OG Edition money planning pages"
+                loading="lazy"
+              >
+            </div>
+            <div class="og-preview-caption">
+              <span class="og-preview-number">04</span>
+              <div>
+                <h3>Money</h3>
+                <p>A little more clarity for your finances.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- SAME CONTENT, DIFFERENT AESTHETICS -->
+    <section class="og-feature-strip">
+      <span class="eyebrow">ONE PLANNING SYSTEM</span>
+
+      <h2>Made for every<br><em>chapter of you.</em></h2>
+
+      <p>
+        The OG Edition shares the same planner content
+        and planning sections as our Minimalist, Coquette
+        and Luxury editions. Choose the aesthetic that
+        feels most like you.
+      </p>
+    </section>
+
+    <!-- PURCHASE -->
+    <section class="og-main">
+      <div class="og-purchase" id="purchase">
+
+        <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+
+        <h2>Make room for<br><em>what matters.</em></h2>
+
+        <p>
+          Bring your plans, priorities and everyday moments
+          into one thoughtful digital planning space.
+        </p>
+
+        <a href="index.html#contact" class="og-button">
+          Purchase the OG Edition <span>↗</span>
+        </a>
+
+        <div class="og-coming-soon">
+          Payhip checkout link to be added
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="og-footer">
+    <div class="og-footer-inner">
+      <p>© 2027 DEAR CHAPTERS · MAKE ROOM FOR EVERY CHAPTER</p>
+      <a href="index.html">← Back to the collection</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
+  </script>
+
+</body>
+</html>
