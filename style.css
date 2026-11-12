@@ -933,3 +933,143 @@ h1 em, h2 em { font-weight: 400; }
     gap: 8px;
   }
 }
+
+/* =========================================
+   DEAR CHAPTERS — PRODUCT-LED REDESIGN
+   ========================================= */
+
+/* HERO: smaller typography */
+.hero h1 {
+  font-size: clamp(2.5rem, 4.2vw, 4.1rem);
+  line-height: 1.08;
+  max-width: 550px;
+}
+
+.hero p {
+  line-height: 1.7;
+}
+
+/* HERO: iPad mockup */
+.hero-visual {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ipad-mockup {
+  position: relative;
+  width: 100%;
+  padding: 2.2%;
+  background: linear-gradient(145deg, #e8e5df, #bdb9b1, #dedbd4);
+  border: 1px solid #aaa69e;
+  border-radius: 24px;
+  box-shadow:
+    0 25px 55px rgba(73, 59, 61, 0.16),
+    0 5px 12px rgba(73, 59, 61, 0.08);
+}
+
+.ipad-camera {
+  position: absolute;
+  top: 50%;
+  left: 0.8%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #77736e;
+  transform: translateY(-50%);
+}
+
+.ipad-screen {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f5f0e9;
+}
+
+.ipad-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-image-caption {
+  margin-top: 18px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #987c75;
+}
+
+/* PRODUCT IMAGES: give them more room */
+.edition-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+}
+
+.edition-card {
+  gap: 14px;
+}
+
+.edition-card h3 {
+  font-size: 1.35rem;
+}
+
+.edition-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* CAROUSEL: larger product previews */
+.carousel-slide {
+  grid-template-columns: 1.7fr 0.45fr;
+  gap: 3%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* SECTION HEADINGS: more restrained */
+section h2 {
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  line-height: 1.15;
+}
+
+section .section-intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+
+  .hero-visual {
+    max-width: 100%;
+  }
+
+  .ipad-mockup {
+    border-radius: 15px;
+    padding: 2.5%;
+  }
+
+  .ipad-screen {
+    border-radius: 9px;
+  }
+
+  .carousel-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .edition-image {
+    aspect-ratio: 16 / 10;
+  }
+}
