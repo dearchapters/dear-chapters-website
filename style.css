@@ -2150,3 +2150,61 @@ section {
     flex-basis: 86%;
   }
 }
+
+/* DEAR CHAPTERS — EQUAL-SIZED CAROUSEL ITEMS */
+
+.inside-gallery {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  touch-action: pan-x;
+}
+
+/* All seven cards have identical widths */
+.inside-gallery > .inside-item {
+  flex: 0 0 38% !important;
+  width: 38% !important;
+  min-width: 0;
+  margin: 0;
+  grid-row: auto !important;
+  grid-column: auto !important;
+}
+
+/* All seven images have identical proportions */
+.inside-gallery > .inside-item img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  object-fit: cover;
+}
+
+/* Remove special sizing from Wellness and Notes */
+.inside-gallery > .inside-feature,
+.inside-gallery > .inside-notes {
+  width: 38% !important;
+  grid-row: auto !important;
+  grid-column: auto !important;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .inside-gallery {
+    gap: 15px;
+  }
+
+  .inside-gallery > .inside-item,
+  .inside-gallery > .inside-feature,
+  .inside-gallery > .inside-notes {
+    flex: 0 0 86% !important;
+    width: 86% !important;
+  }
+}
