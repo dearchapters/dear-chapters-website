@@ -2208,3 +2208,19 @@ section {
     width: 86% !important;
   }
 }
+
+/* FINAL FIX — WELLNESS MUST MATCH EVERY OTHER CARD */
+
+.inside-gallery > .inside-item.inside-feature {
+  flex: 0 0 38% !important;
+  width: 38% !important;
+  max-width: 38% !important;
+}
+
+@media (max-width: 650px) {
+  .inside-gallery > .inside-item.inside-feature {
+    flex: 0 0 86% !important;
+    width: 86% !important;
+    max-width: 86% !important;
+  }
+}
