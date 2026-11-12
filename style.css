@@ -1622,3 +1622,13 @@ h2 em {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Preserve the complete planner screenshots */
+.ipad-screen img {
+  object-fit: contain;
+}
+
+/* Keep the original product cover colours */
+.edition-image img {
+  mix-blend-mode: normal;
+}
