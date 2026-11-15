@@ -1,1 +1,454 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Minimalist Edition | Dear Chapters</title>
+  <meta name="description" content="Discover the Minimalist Edition by Dear Chapters. A thoughtfully designed digital planner for every chapter of your life.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --edition-bg: #F4F3ED;
+      --edition-card: #FBFAF6;
+      --edition-text: #414239;
+      --edition-muted: #929181;
+      --edition-accent: #85866A;
+      --edition-soft: #E8E8DD;
+    }
+
+    body {
+      background: var(--edition-bg);
+      color: var(--edition-text);
+    }
+
+    .minimalist-page {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Navigation */
+
+    .minimalist-nav {
+      padding: 24px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(65,66,57,0.12);
+    }
+
+    .minimalist-nav a {
+      color: var(--edition-text);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    .minimalist-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px !important;
+      letter-spacing: 1px !important;
+    }
+
+    /* Hero */
+
+    .minimalist-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+      padding: 85px 10%;
+    }
+
+    .minimalist-cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 35px;
+      background: var(--edition-accent);
+    }
+
+    .minimalist-cover {
+      display: block;
+      width: 100%;
+      max-width: 510px;
+      max-height: 660px;
+      object-fit: contain;
+    }
+
+    .minimalist-eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--edition-muted);
+      margin-bottom: 20px;
+    }
+
+    .minimalist-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5vw, 65px);
+      font-weight: 400;
+      line-height: 1.05;
+      margin: 0 0 25px;
+    }
+
+    .minimalist-hero p {
+      font-size: 13px;
+      line-height: 2;
+      color: var(--edition-muted);
+      max-width: 430px;
+    }
+
+    .minimalist-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 16px 30px;
+      background: var(--edition-accent);
+      color: white !important;
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Interior previews */
+
+    .minimalist-section {
+      padding: 85px 10%;
+    }
+
+    .minimalist-section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .minimalist-section-heading span {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--edition-muted);
+    }
+
+    .minimalist-section-heading h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 400;
+      margin: 12px 0;
+    }
+
+    .minimalist-intro {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 13px;
+      line-height: 2;
+      color: var(--edition-muted);
+    }
+
+    .minimalist-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .minimalist-preview {
+      background: var(--edition-card);
+      padding: 15px;
+    }
+
+    .minimalist-preview img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .minimalist-preview-label {
+      padding: 15px 5px 5px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--edition-text);
+    }
+
+    /* Edition information */
+
+    .minimalist-feature {
+      background: var(--edition-soft);
+      padding: 70px 10%;
+      text-align: center;
+    }
+
+    .minimalist-feature h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 400;
+      margin: 0 0 20px;
+    }
+
+    .minimalist-feature p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 13px;
+      line-height: 2;
+      color: var(--edition-muted);
+    }
+
+    /* Details */
+
+    .minimalist-details {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .minimalist-detail-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(65,66,57,0.15);
+      font-size: 12px;
+    }
+
+    .minimalist-detail-row span:last-child {
+      color: var(--edition-muted);
+      text-align: right;
+    }
+
+    /* Footer */
+
+    .minimalist-footer {
+      padding: 35px 7%;
+      text-align: center;
+      border-top: 1px solid rgba(65,66,57,0.12);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--edition-muted);
+    }
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+      .minimalist-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 7%;
+      }
+
+      .minimalist-cover-wrap {
+        padding: 20px;
+      }
+
+      .minimalist-section {
+        padding: 60px 7%;
+      }
+
+      .minimalist-preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .minimalist-nav {
+        padding: 20px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="minimalist-page">
+
+  <!-- NAVIGATION -->
+
+  <nav class="minimalist-nav">
+    <a href="index.html">← BACK TO COLLECTION</a>
+    <a href="index.html" class="minimalist-brand">Dear Chapters</a>
+  </nav>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="minimalist-hero">
+
+    <div class="minimalist-cover-wrap">
+      <img
+        src="assets/products/minimalist-cover.jpg"
+        alt="Dear Chapters Minimalist Edition digital planner cover"
+        class="minimalist-cover"
+      >
+    </div>
+
+    <div class="minimalist-hero-content">
+
+      <div class="minimalist-eyebrow">
+        THE MINIMALIST COLLECTION
+      </div>
+
+      <h1>Less noise.<br>More clarity.</h1>
+
+      <p>
+        A calm and intentional space to organise your days,
+        manage your responsibilities and make room for what matters.
+        Designed for women who carry many roles, yet still deserve
+        a little space for themselves.
+      </p>
+
+      <a href="#details" class="minimalist-button">
+        EXPLORE THE PLANNER
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTERIOR PREVIEW SECTION -->
+
+  <section class="minimalist-section">
+
+    <div class="minimalist-section-heading">
+
+      <span>INSIDE THE PLANNER</span>
+
+      <h2>A closer look</h2>
+
+      <p class="minimalist-intro">
+        Thoughtfully organised pages to support different parts
+        of your life, from everyday routines to personal wellbeing.
+      </p>
+
+    </div>
+
+    <div class="minimalist-preview-grid">
+
+      <div class="minimalist-preview">
+        <img
+          src="assets/products/start-min.jpg"
+          alt="Minimalist Start section preview"
+        >
+        <div class="minimalist-preview-label">START</div>
+      </div>
+
+      <div class="minimalist-preview">
+        <img
+          src="assets/products/prayer-min.jpg"
+          alt="Minimalist Prayer section preview"
+        >
+        <div class="minimalist-preview-label">PRAYER</div>
+      </div>
+
+      <div class="minimalist-preview">
+        <img
+          src="assets/products/meals-min.jpg"
+          alt="Minimalist Meals section preview"
+        >
+        <div class="minimalist-preview-label">MEALS</div>
+      </div>
+
+      <div class="minimalist-preview">
+        <img
+          src="assets/products/health-min.jpg"
+          alt="Minimalist Health section preview"
+        >
+        <div class="minimalist-preview-label">HEALTH</div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EDITION FEATURES -->
+
+  <section class="minimalist-feature">
+
+    <h2>One planner. Every chapter.</h2>
+
+    <p>
+      Every Dear Chapters edition contains the same thoughtfully
+      designed planning system and features. Choose the aesthetic
+      that feels most like you.
+    </p>
+
+  </section>
+
+
+  <!-- PRODUCT DETAILS -->
+
+  <section class="minimalist-section" id="details">
+
+    <div class="minimalist-section-heading">
+
+      <span>THE DETAILS</span>
+
+      <h2>Made for everyday life</h2>
+
+    </div>
+
+    <div class="minimalist-details">
+
+      <div class="minimalist-detail-row">
+        <span>FORMAT</span>
+        <span>Digital planner</span>
+      </div>
+
+      <div class="minimalist-detail-row">
+        <span>DESIGNED FOR</span>
+        <span>iPad & digital note-taking apps</span>
+      </div>
+
+      <div class="minimalist-detail-row">
+        <span>LAYOUT</span>
+        <span>Landscape</span>
+      </div>
+
+      <div class="minimalist-detail-row">
+        <span>CONTENT</span>
+        <span>All-in-one life planning system</span>
+      </div>
+
+      <div class="minimalist-detail-row">
+        <span>EDITION</span>
+        <span>Minimalist</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLOSING SECTION -->
+
+  <section class="minimalist-feature">
+
+    <h2>Make room for every chapter.</h2>
+
+    <p>
+      Your life has many moving parts. Give each one a place.
+    </p>
+
+    <a href="#details" class="minimalist-button">
+      DISCOVER THE DETAILS
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="minimalist-footer">
+    DEAR CHAPTERS · MAKE ROOM FOR EVERY CHAPTER
+  </footer>
+
+</div>
+
+</body>
+</html>
+
