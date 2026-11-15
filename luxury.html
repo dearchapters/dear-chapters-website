@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Luxury Edition | Dear Chapters</title>
-  <meta name="description" content="The Elevated Edition by Dear Chapters. A refined digital planner designed to bring clarity and intention to every chapter of your life.">
+  <meta name="description" content="Discover the Luxury Edition by Dear Chapters — an elevated digital planner for every chapter of your life.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,7 +112,7 @@
       color: var(--accent);
     }
 
-    /* Hero */
+    /* HERO */
 
     .hero {
       display: grid;
@@ -200,7 +200,7 @@
       background: var(--text);
     }
 
-    /* Interior previews */
+    /* INTERIOR PREVIEWS */
 
     .section {
       padding: 75px 0;
@@ -260,7 +260,7 @@
       color: var(--muted);
     }
 
-    /* Feature section */
+    /* FEATURE STRIP */
 
     .feature-strip {
       background: var(--soft);
@@ -282,7 +282,7 @@
       color: #776B68;
     }
 
-    /* Details */
+    /* DETAILS */
 
     .details {
       max-width: 760px;
@@ -309,11 +309,128 @@
       color: var(--text);
     }
 
-    /* Closing section */
+    /* PRICING */
+
+    .pricing-section {
+      padding: 85px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .price-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 35px 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .price-card.featured {
+      background: #E9DED5;
+      border-color: var(--muted);
+    }
+
+    .price-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .price-card h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 43px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .price-description {
+      color: #766968;
+      font-size: 12px;
+      line-height: 1.9;
+      max-width: 290px;
+      margin: 10px auto 25px;
+    }
+
+    .price-button {
+      display: inline-block;
+      width: 100%;
+      max-width: 250px;
+      padding: 14px 20px;
+      background: var(--accent);
+      color: white;
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      transition: background .25s ease;
+      margin-top: auto;
+    }
+
+    .price-button:hover {
+      background: var(--text);
+    }
+
+    .price-note {
+      text-align: center;
+      max-width: 650px;
+      margin: 28px auto 0;
+      font-size: 11px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      padding: 65px 20px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--muted);
+      padding-bottom: 3px;
+    }
+
+    .contact-email:hover {
+      color: var(--text);
+    }
+
+    /* CLOSING */
 
     .closing {
       text-align: center;
-      padding: 80px 20px 95px;
+      padding: 70px 20px 85px;
       border-top: 1px solid var(--line);
     }
 
@@ -328,20 +445,74 @@
       margin-bottom: 25px;
     }
 
-    footer {
+    /* FOOTER AND SOCIAL LINKS */
+
+    .site-footer {
       border-top: 1px solid var(--line);
-      padding: 25px 6%;
+      padding: 38px 20px;
       text-align: center;
       color: var(--muted);
       font-size: 10px;
       letter-spacing: 1px;
     }
 
-    footer a:hover {
+    .footer-brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 23px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+
+    .footer-tagline {
+      margin-top: 5px;
+      font-size: 11px;
+      letter-spacing: .5px;
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      margin: 25px 0 17px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .7px;
+      transition: color .25s ease;
+    }
+
+    .social-link:hover {
       color: var(--accent);
     }
 
-    /* Responsive */
+    .social-link svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .footer-email {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: .3px;
+      color: var(--accent);
+      margin-top: 3px;
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 9px;
+      letter-spacing: .5px;
+      color: var(--muted);
+    }
+
+    /* RESPONSIVE */
 
     @media (max-width: 760px) {
       header {
@@ -395,14 +566,27 @@
         grid-template-columns: 110px 1fr;
         gap: 15px;
       }
+
+      .pricing-grid {
+        gap: 15px;
+      }
+
+      .price-card {
+        padding: 27px 16px;
+      }
+
+      .price {
+        font-size: 36px;
+      }
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 520px) {
       .container {
         width: 90%;
       }
 
-      .preview-grid {
+      .preview-grid,
+      .pricing-grid {
         grid-template-columns: 1fr;
       }
 
@@ -412,6 +596,16 @@
 
       .preview-caption h3 {
         font-size: 23px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .footer-socials {
+        gap: 18px;
+      }
+
+      .social-link {
+        font-size: 9px;
       }
     }
   </style>
@@ -563,7 +757,6 @@
         </article>
 
       </div>
-
     </section>
 
     <!-- FEATURE STRIP -->
@@ -629,6 +822,104 @@
         </div>
 
       </div>
+    </section>
+
+    <!-- PRICING AND PURCHASE -->
+
+    <section class="pricing-section" id="pricing">
+
+      <div class="section-heading">
+        <p class="eyebrow">Choose your experience</p>
+        <h2>Find your way to begin.</h2>
+        <p>
+          Choose the package that feels right for your planning journey.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- TRIAL PACKAGE -->
+
+        <div class="price-card">
+          <p class="price-label">A little introduction</p>
+
+          <h3>Trial Package</h3>
+
+          <div class="price">RM19.90</div>
+
+          <p class="price-description">
+            A chance to explore Dear Chapters and experience
+            a selection of its planning pages before choosing
+            the complete planner.
+          </p>
+
+          <a
+            href="https://payhip.com/b/z352C"
+            class="price-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get the Trial Package
+          </a>
+        </div>
+
+        <!-- FULL EDITION -->
+
+        <div class="price-card featured">
+          <p class="price-label">The complete experience</p>
+
+          <h3>Full Edition</h3>
+
+          <div class="price">RM59.90</div>
+
+          <p class="price-description">
+            The complete Dear Chapters planner, with all
+            planning sections, layouts and features for a
+            more intentional everyday.
+          </p>
+
+          <a
+            href="https://payhip.com/b/9Bf8V"
+            class="price-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get the Full Edition
+          </a>
+        </div>
+
+      </div>
+
+      <p class="price-note">
+        Prefer a different look? You can select your preferred
+        theme — OG, Minimalist, Coquette or Luxury — on the
+        Payhip product page before completing your purchase.
+        <br><br>
+        Already purchased the Trial Package? Look out for your
+        exclusive Full Edition upgrade offer through Payhip.
+      </p>
+
+    </section>
+
+    <!-- CONTACT US -->
+
+    <section class="contact-section">
+
+      <p class="eyebrow">We're here to help</p>
+
+      <h2>Contact Us</h2>
+
+      <p>
+        Have a question about your planner or need assistance
+        with your purchase? We'd love to hear from you.
+      </p>
+
+      <a
+        href="mailto:dearchapters.co@gmail.com"
+        class="contact-email"
+      >
+        dearchapters.co@gmail.com
+      </a>
 
     </section>
 
@@ -642,8 +933,8 @@
 
       <p>Find your rhythm with the Luxury Edition.</p>
 
-      <a href="index.html#collection" class="primary-button">
-        Explore the collection
+      <a href="#pricing" class="primary-button">
+        Choose your package
       </a>
 
     </section>
@@ -652,10 +943,77 @@
 
   <!-- FOOTER -->
 
-  <footer>
-    <a href="index.html">DEAR CHAPTERS</a>
-    &nbsp; · &nbsp;
-    Make room for every chapter.
+  <footer class="site-footer">
+
+    <a href="index.html" class="footer-brand">
+      DEAR CHAPTERS
+    </a>
+
+    <p class="footer-tagline">
+      Make room for every chapter.
+    </p>
+
+    <div class="footer-socials">
+
+      <!-- THREADS -->
+
+      <a
+        href="https://www.threads.net/@dearchapters.co"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Dear Chapters on Threads"
+        class="social-link"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/>
+        </svg>
+        <span>Threads</span>
+      </a>
+
+      <!-- INSTAGRAM -->
+
+      <a
+        href="https://www.instagram.com/dearchapters.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Dear Chapters on Instagram"
+        class="social-link"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+          <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+
+      <!-- EMAIL -->
+
+      <a
+        href="mailto:dearchapters.co@gmail.com"
+        aria-label="Email Dear Chapters"
+        class="social-link"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Email</span>
+      </a>
+
+    </div>
+
+    <a
+      href="mailto:dearchapters.co@gmail.com"
+      class="footer-email"
+    >
+      dearchapters.co@gmail.com
+    </a>
+
+    <p class="footer-copyright">
+      © 2026 Dear Chapters. All rights reserved.
+    </p>
+
   </footer>
 
 </body>
