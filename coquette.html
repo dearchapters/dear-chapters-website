@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Coquette Edition | Dear Chapters</title>
+  <meta name="description" content="Discover the Coquette Edition by Dear Chapters. A soft, romantic and feminine digital planner for every chapter of your life.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --edition-bg: #FBF5F4;
+      --edition-card: #FFFCFA;
+      --edition-text: #493B3D;
+      --edition-muted: #987C75;
+      --edition-accent: #B48F9D;
+      --edition-soft: #F1E3E6;
+      --edition-cover: #EBD8DE;
+    }
+
+    body {
+      background: var(--edition-bg);
+      color: var(--edition-text);
+    }
+
+    .coquette-page {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Navigation */
+
+    .coquette-nav {
+      padding: 24px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(73,59,61,0.12);
+    }
+
+    .coquette-nav a {
+      color: var(--edition-text);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    .coquette-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px !important;
+      letter-spacing: 1px !important;
+    }
+
+    /* Hero */
+
+    .coquette-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+      padding: 85px 10%;
+    }
+
+    .coquette-cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 35px;
+      background: var(--edition-cover);
+    }
+
+    .coquette-cover {
+      display: block;
+      width: 100%;
+      max-width: 510px;
+      max-height: 660px;
+      object-fit: contain;
+    }
+
+    .coquette-eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--edition-muted);
+      margin-bottom: 20px;
+    }
+
+    .coquette-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5vw, 65px);
+      font-weight: 400;
+      line-height: 1.05;
+      margin: 0 0 25px;
+    }
+
+    .coquette-hero p {
+      font-size: 13px;
+      line-height: 2;
+      color: var(--edition-muted);
+      max-width: 430px;
+    }
+
+    .coquette-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 16px 30px;
+      background: var(--edition-accent);
+      color: white !important;
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+    }
+
+    .coquette-button:hover {
+      opacity: 0.8;
+    }
+
+    /* Interior previews */
+
+    .coquette-section {
+      padding: 85px 10%;
+    }
+
+    .coquette-section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .coquette-section-heading span {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--edition-muted);
+    }
+
+    .coquette-section-heading h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 400;
+      margin: 12px 0;
+    }
+
+    .coquette-intro {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 13px;
+      line-height: 2;
+      color: var(--edition-muted);
+    }
+
+    .coquette-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .coquette-preview {
+      background: var(--edition-card);
+      padding: 15px;
+    }
+
+    .coquette-preview img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .coquette-preview-label {
+      padding: 15px 5px 5px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--edition-text);
+    }
+
+    /* Edition features */
+
+    .coquette-feature {
+      background: var(--edition-soft);
+      padding: 70px 10%;
+      text-align: center;
+    }
+
+    .coquette-feature h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 400;
+      margin: 0 0 20px;
+    }
+
+    .coquette-feature p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 13px;
+      line-height: 2;
+      color: var(--edition-muted);
+    }
+
+    /* Product details */
+
+    .coquette-details {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .coquette-detail-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(73,59,61,0.15);
+      font-size: 12px;
+    }
+
+    .coquette-detail-row span:last-child {
+      color: var(--edition-muted);
+      text-align: right;
+    }
+
+    .coquette-price {
+      margin-top: 35px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      text-align: center;
+      color: var(--edition-text);
+    }
+
+    .coquette-price small {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--edition-muted);
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+
+    .coquette-footer {
+      padding: 35px 7%;
+      text-align: center;
+      border-top: 1px solid rgba(73,59,61,0.12);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--edition-muted);
+    }
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+      .coquette-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 7%;
+      }
+
+      .coquette-cover-wrap {
+        padding: 20px;
+      }
+
+      .coquette-section {
+        padding: 60px 7%;
+      }
+
+      .coquette-preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .coquette-nav {
+        padding: 20px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="coquette-page">
+
+  <!-- NAVIGATION -->
+
+  <nav class="coquette-nav">
+    <a href="index.html">← BACK TO COLLECTION</a>
+    <a href="index.html" class="coquette-brand">Dear Chapters</a>
+  </nav>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="coquette-hero">
+
+    <div class="coquette-cover-wrap">
+      <img
+        src="assets/products/coquette-cover.jpg"
+        alt="Dear Chapters Coquette Edition digital planner cover"
+        class="coquette-cover"
+      >
+    </div>
+
+    <div class="coquette-hero-content">
+
+      <div class="coquette-eyebrow">
+        03 — A SOFTER CHAPTER
+      </div>
+
+      <h1>Soft, romantic<br>and playful.</h1>
+
+      <p>
+        A romantic, feminine expression of the Dear Chapters
+        planner, with every practical planning section still
+        in place. Thoughtfully designed to bring a little
+        beauty into the way you organise your everyday life.
+      </p>
+
+      <a href="#details" class="coquette-button">
+        EXPLORE THE PLANNER
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTERIOR PREVIEW SECTION -->
+
+  <section class="coquette-section">
+
+    <div class="coquette-section-heading">
+
+      <span>INSIDE THE PLANNER</span>
+
+      <h2>A closer look</h2>
+
+      <p class="coquette-intro">
+        From getting started to planning your months,
+        mapping out your year and keeping track of your
+        finances, every section has its place.
+      </p>
+
+    </div>
+
+    <div class="coquette-preview-grid">
+
+      <div class="coquette-preview">
+        <img
+          src="assets/products/start-coq.jpg"
+          alt="Coquette Start section preview"
+        >
+        <div class="coquette-preview-label">START</div>
+      </div>
+
+      <div class="coquette-preview">
+        <img
+          src="assets/products/month-coq.jpg"
+          alt="Coquette Month section preview"
+        >
+        <div class="coquette-preview-label">MONTH</div>
+      </div>
+
+      <div class="coquette-preview">
+        <img
+          src="assets/products/quarter-coq.jpg"
+          alt="Coquette Quarter section preview"
+        >
+        <div class="coquette-preview-label">QUARTER</div>
+      </div>
+
+      <div class="coquette-preview">
+        <img
+          src="assets/products/money-coq.jpg"
+          alt="Coquette Money section preview"
+        >
+        <div class="coquette-preview-label">MONEY</div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EDITION FEATURES -->
+
+  <section class="coquette-feature">
+
+    <h2>Romance in the details. Clarity in the everyday.</h2>
+
+    <p>
+      Every Dear Chapters edition contains the same thoughtfully
+      designed planning system and features. Choose the aesthetic
+      that feels most like you.
+    </p>
+
+  </section>
+
+
+  <!-- PRODUCT DETAILS -->
+
+  <section class="coquette-section" id="details">
+
+    <div class="coquette-section-heading">
+
+      <span>THE DETAILS</span>
+
+      <h2>Made for everyday life</h2>
+
+    </div>
+
+    <div class="coquette-details">
+
+      <div class="coquette-detail-row">
+        <span>FORMAT</span>
+        <span>Digital planner</span>
+      </div>
+
+      <div class="coquette-detail-row">
+        <span>DESIGNED FOR</span>
+        <span>iPad & digital note-taking apps</span>
+      </div>
+
+      <div class="coquette-detail-row">
+        <span>LAYOUT</span>
+        <span>Landscape</span>
+      </div>
+
+      <div class="coquette-detail-row">
+        <span>CONTENT</span>
+        <span>All-in-one life planning system</span>
+      </div>
+
+      <div class="coquette-detail-row">
+        <span>EDITION</span>
+        <span>Coquette</span>
+      </div>
+
+      <div class="coquette-detail-row">
+        <span>DELIVERY</span>
+        <span>Digital download</span>
+      </div>
+
+    </div>
+
+    <div class="coquette-price">
+      <small>INTRODUCTORY PRICE</small>
+      RM55.90
+    </div>
+
+    <div style="text-align:center;">
+      <a href="#details" class="coquette-button">
+        DISCOVER THE DETAILS
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- CLOSING SECTION -->
+
+  <section class="coquette-feature">
+
+    <h2>Make room for every chapter.</h2>
+
+    <p>
+      A little more beauty in your plans.
+      A little more space for everything that matters.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="coquette-footer">
+    DEAR CHAPTERS · MAKE ROOM FOR EVERY CHAPTER
+  </footer>
+
+</div>
+
+</body>
+</html>
