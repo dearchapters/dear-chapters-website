@@ -5,67 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Coquette Edition | Dear Chapters</title>
-  <meta name="description" content="Discover the Coquette Edition by Dear Chapters. A soft, romantic and feminine digital planner for every chapter of your life.">
+  <title>Coquette Edition — Dear Chapters</title>
+  <meta name="description" content="Discover the Dear Chapters Coquette Edition: a soft, romantic and feminine digital planner for every chapter of your life.">
+  <meta name="theme-color" content="#FBF5F4">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
   <style>
     :root {
-      --edition-bg: #FBF5F4;
-      --edition-card: #FFFCFA;
-      --edition-text: #493B3D;
-      --edition-muted: #987C75;
-      --edition-accent: #B48F9D;
-      --edition-soft: #F1E3E6;
-      --edition-cover: #EBD8DE;
+      --coquette-bg: #FBF5F4;
+      --coquette-card: #FFFCFA;
+      --coquette-text: #493B3D;
+      --coquette-muted: #987C75;
+      --coquette-accent: #B48F9D;
+      --coquette-line: rgba(73, 59, 61, 0.14);
+      --coquette-soft: #F1E3E6;
     }
 
     body {
-      background: var(--edition-bg);
-      color: var(--edition-text);
+      background: var(--coquette-bg);
+      color: var(--coquette-text);
     }
 
-    .coquette-page {
-      width: 100%;
-      overflow: hidden;
+    .site-header {
+      background: rgba(251, 245, 244, 0.96);
     }
 
-    /* Navigation */
-
-    .coquette-nav {
-      padding: 24px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(73,59,61,0.12);
+    .announcement {
+      background: var(--coquette-text);
     }
 
-    .coquette-nav a {
-      color: var(--edition-text);
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 1.5px;
+    .announcement span {
+      color: var(--coquette-accent);
     }
 
-    .coquette-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 25px !important;
-      letter-spacing: 1px !important;
+    .coquette-main {
+      max-width: 1440px;
+      margin: auto;
+      padding: 0 7%;
     }
 
-    /* Hero */
+    .coquette-breadcrumb {
+      padding: 27px 0;
+      color: var(--coquette-muted);
+      font-size: 9px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .coquette-breadcrumb a:hover {
+      color: var(--coquette-accent);
+    }
+
+    /* HERO */
 
     .coquette-hero {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 0.9fr;
       align-items: center;
-      gap: 70px;
-      padding: 85px 10%;
+      gap: 9%;
+      padding: 45px 0 100px;
     }
 
     .coquette-cover-wrap {
@@ -73,201 +76,293 @@
       justify-content: center;
       align-items: center;
       padding: 35px;
-      background: var(--edition-cover);
+      background: #EBD8DE;
     }
 
     .coquette-cover {
-      display: block;
       width: 100%;
       max-width: 510px;
       max-height: 660px;
       object-fit: contain;
+      object-position: center;
     }
 
-    .coquette-eyebrow {
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--edition-muted);
-      margin-bottom: 20px;
+    .coquette-cover-caption {
+      margin-top: 15px;
+      color: var(--coquette-muted);
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
     }
 
-    .coquette-hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(42px, 5vw, 65px);
+    .coquette-copy .eyebrow {
+      color: var(--coquette-muted);
+    }
+
+    .coquette-copy h1 {
+      margin: 23px 0 10px;
+      color: var(--coquette-text);
+      font-family: var(--serif);
+      font-size: clamp(55px, 6vw, 82px);
       font-weight: 400;
-      line-height: 1.05;
-      margin: 0 0 25px;
+      line-height: 0.95;
+      letter-spacing: -2px;
     }
 
-    .coquette-hero p {
-      font-size: 13px;
-      line-height: 2;
-      color: var(--edition-muted);
-      max-width: 430px;
+    .coquette-subtitle {
+      margin: 0 0 27px;
+      color: var(--coquette-accent);
+      font-family: var(--serif);
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    .coquette-description {
+      max-width: 410px;
+      color: var(--coquette-muted);
+      font-size: 11px;
+      line-height: 2.2;
+    }
+
+    .coquette-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 30px;
+      color: var(--coquette-muted);
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    .coquette-note::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--coquette-accent);
+    }
+
+    .coquette-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 34px;
     }
 
     .coquette-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 16px 30px;
-      background: var(--edition-accent);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      min-height: 48px;
+      padding: 13px 22px;
+      border: 1px solid var(--coquette-accent);
+      background: var(--coquette-accent);
       color: white !important;
-      text-decoration: none;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: opacity 0.3s ease;
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      transition: 0.25s ease;
     }
 
     .coquette-button:hover {
-      opacity: 0.8;
+      background: #987C88;
+      border-color: #987C88;
     }
 
-    /* Interior previews */
+    .coquette-button-secondary {
+      background: transparent;
+      color: var(--coquette-accent) !important;
+    }
+
+    .coquette-button-secondary:hover {
+      background: var(--coquette-card);
+      color: var(--coquette-text) !important;
+    }
+
+    .coquette-divider {
+      height: 1px;
+      background: var(--coquette-line);
+    }
+
+    /* INTERIOR PREVIEWS */
 
     .coquette-section {
-      padding: 85px 10%;
+      padding: 90px 0;
     }
 
     .coquette-section-heading {
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
       margin-bottom: 45px;
     }
 
-    .coquette-section-heading span {
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--edition-muted);
-    }
-
     .coquette-section-heading h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 42px;
+      margin: 15px 0 0;
+      color: var(--coquette-text);
+      font-family: var(--serif);
+      font-size: clamp(39px, 4.5vw, 60px);
       font-weight: 400;
-      margin: 12px 0;
+      line-height: 1;
     }
 
-    .coquette-intro {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 13px;
+    .coquette-section-heading h2 em {
+      color: var(--coquette-accent);
+      font-weight: 400;
+    }
+
+    .coquette-section-heading p {
+      max-width: 260px;
+      margin: 0;
+      color: var(--coquette-muted);
+      font-size: 10px;
       line-height: 2;
-      color: var(--edition-muted);
     }
 
     .coquette-preview-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
-      margin-top: 50px;
+      gap: 45px 28px;
     }
 
-    .coquette-preview {
-      background: var(--edition-card);
-      padding: 15px;
+    .coquette-preview-card {
+      min-width: 0;
     }
 
-    .coquette-preview img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    .coquette-preview-label {
-      padding: 15px 5px 5px;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--edition-text);
-    }
-
-    /* Edition features */
-
-    .coquette-feature {
-      background: var(--edition-soft);
-      padding: 70px 10%;
-      text-align: center;
-    }
-
-    .coquette-feature h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 38px;
-      font-weight: 400;
-      margin: 0 0 20px;
-    }
-
-    .coquette-feature p {
-      max-width: 650px;
-      margin: auto;
-      font-size: 13px;
-      line-height: 2;
-      color: var(--edition-muted);
-    }
-
-    /* Product details */
-
-    .coquette-details {
-      max-width: 750px;
-      margin: auto;
-    }
-
-    .coquette-detail-row {
+    .coquette-preview-image {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(73,59,61,0.15);
-      font-size: 12px;
+      justify-content: center;
+      align-items: center;
+      min-height: 220px;
+      padding: 18px;
+      overflow: hidden;
+      background: var(--coquette-card);
+      border: 1px solid rgba(73, 59, 61, 0.06);
     }
 
-    .coquette-detail-row span:last-child {
-      color: var(--edition-muted);
-      text-align: right;
+    .coquette-preview-image img {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: contain;
+      object-position: center;
     }
 
-    .coquette-price {
-      margin-top: 35px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 36px;
-      text-align: center;
-      color: var(--edition-text);
+    .coquette-preview-caption {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      padding-top: 17px;
     }
 
-    .coquette-price small {
-      display: block;
-      font-family: 'DM Sans', sans-serif;
+    .coquette-preview-number {
+      padding-top: 5px;
+      color: var(--coquette-accent);
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+
+    .coquette-preview-caption h3 {
+      margin: 0;
+      color: var(--coquette-text);
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    .coquette-preview-caption p {
+      margin: 3px 0 0;
+      color: var(--coquette-muted);
       font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--edition-muted);
-      margin-bottom: 8px;
     }
 
-    /* Footer */
+    /* FEATURE STRIP */
+
+    .coquette-feature-strip {
+      padding: 65px 7%;
+      background: var(--coquette-soft);
+      text-align: center;
+    }
+
+    .coquette-feature-strip h2 {
+      margin: 15px 0;
+      color: var(--coquette-text);
+      font-family: var(--serif);
+      font-size: clamp(35px, 4vw, 52px);
+      font-weight: 400;
+    }
+
+    .coquette-feature-strip h2 em {
+      color: var(--coquette-accent);
+    }
+
+    .coquette-feature-strip p {
+      max-width: 520px;
+      margin: auto;
+      color: var(--coquette-muted);
+      font-size: 10px;
+      line-height: 2.1;
+    }
+
+    /* PURCHASE */
+
+    .coquette-purchase {
+      padding: 95px 0 110px;
+      text-align: center;
+    }
+
+    .coquette-purchase h2 {
+      margin: 17px 0;
+      color: var(--coquette-text);
+      font-family: var(--serif);
+      font-size: clamp(42px, 5vw, 65px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .coquette-purchase h2 em {
+      color: var(--coquette-accent);
+    }
+
+    .coquette-purchase p {
+      max-width: 440px;
+      margin: 0 auto 25px;
+      color: var(--coquette-muted);
+      font-size: 10px;
+      line-height: 2;
+    }
+
+    /* FOOTER */
 
     .coquette-footer {
-      padding: 42px 7% 30px;
+      padding: 38px 7%;
+      border-top: 1px solid var(--coquette-line);
       text-align: center;
-      border-top: 1px solid rgba(73,59,61,0.12);
-      color: var(--edition-muted);
+    }
+
+    .coquette-footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 1440px;
+      margin: auto;
     }
 
     .coquette-footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 25px;
-      letter-spacing: 1px;
-      color: var(--edition-text);
-      margin-bottom: 7px;
+      color: var(--coquette-text) !important;
+      font-family: var(--serif);
+      font-size: 24px !important;
+      letter-spacing: 2px;
+      font-weight: 500;
     }
 
     .coquette-footer-tagline {
+      margin: 0;
+      color: var(--coquette-muted);
       font-size: 9px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
+      letter-spacing: .7px;
     }
 
     .coquette-socials {
@@ -275,87 +370,128 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 22px;
-      margin: 0 auto 18px;
+      gap: 27px;
+      margin: 18px 0 8px;
     }
 
     .coquette-social-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: var(--edition-text);
-      text-decoration: none;
-      font-size: 10px;
-      letter-spacing: 1px;
-      transition: opacity 0.2s ease;
+      gap: 7px;
+      color: #987C88 !important;
+      font-size: 9px !important;
+      letter-spacing: .7px;
+      transition: color .25s ease;
     }
 
-    .coquette-social-link:hover {
-      opacity: 0.65;
+    .coquette-social-link:hover,
+    .coquette-footer-back:hover {
+      color: var(--coquette-text) !important;
     }
 
     .coquette-social-link svg {
-      width: 17px;
-      height: 17px;
       display: block;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.6;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+      width: 18px;
+      height: 18px;
     }
 
     .coquette-footer-email {
-      display: inline-block;
-      color: var(--edition-muted);
-      text-decoration: none;
-      font-size: 10px;
-      letter-spacing: 0.5px;
-      margin-bottom: 22px;
+      color: #987C88 !important;
+      font-size: 10px !important;
+      letter-spacing: .3px;
     }
 
     .coquette-footer-copyright {
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      margin: 12px 0 0;
+      color: var(--coquette-muted);
+      font-size: 8px;
+      letter-spacing: .8px;
     }
 
-    /* Mobile */
+    .coquette-footer-back {
+      margin-top: 8px;
+      color: #987C88 !important;
+      font-size: 9px !important;
+    }
 
-    @media (max-width: 768px) {
+    @media (max-width: 430px) {
+      .coquette-socials {
+        gap: 17px;
+      }
+
+      .coquette-social-link {
+        font-size: 8px !important;
+      }
+    }
+
+    /* TABLET */
+
+    @media (max-width: 800px) {
       .coquette-hero {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 50px 7%;
+        gap: 45px;
+        padding: 25px 0 70px;
       }
 
       .coquette-cover-wrap {
         padding: 20px;
       }
 
+      .coquette-cover {
+        max-height: 530px;
+      }
+
+      .coquette-copy {
+        text-align: center;
+      }
+
+      .coquette-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .coquette-note,
+      .coquette-actions {
+        justify-content: center;
+      }
+
       .coquette-section {
-        padding: 60px 7%;
+        padding: 65px 0;
+      }
+
+      .coquette-section-heading {
+        display: block;
+      }
+
+      .coquette-section-heading p {
+        margin-top: 20px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 560px) {
+      .coquette-main {
+        padding: 0 5%;
       }
 
       .coquette-preview-grid {
         grid-template-columns: 1fr;
+        gap: 35px;
       }
 
-      .coquette-nav {
-        padding: 20px 6%;
+      .coquette-preview-image {
+        min-height: 160px;
+        padding: 12px;
       }
 
-      .coquette-nav a {
-        font-size: 9px;
-        letter-spacing: 1px;
+      .coquette-preview-image img {
+        max-height: 380px;
       }
 
-      .coquette-footer {
-        padding: 35px 6% 25px;
-      }
-
-      .coquette-socials {
-        gap: 16px;
+      .coquette-footer-inner {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
@@ -363,270 +499,388 @@
 
 <body>
 
-<div class="coquette-page">
+  <!-- ANNOUNCEMENT -->
 
-  <!-- NAVIGATION -->
-
-  <nav class="coquette-nav">
-    <a href="index.html">← BACK TO COLLECTION</a>
-    <a href="index.html" class="coquette-brand">Dear Chapters</a>
-  </nav>
+  <div class="announcement">
+    THE 2027 COLLECTION <span>✳</span> MAKE ROOM FOR EVERY CHAPTER
+  </div>
 
 
-  <!-- HERO SECTION -->
+  <!-- HEADER -->
 
-  <section class="coquette-hero">
+  <header class="site-header">
+    <div class="header-inner">
 
-    <div class="coquette-cover-wrap">
-      <img
-        src="assets/products/coquette-cover.jpg"
-        alt="Dear Chapters Coquette Edition digital planner cover"
-        class="coquette-cover"
-      >
+      <a href="index.html" class="brand">
+        <span class="brand-name">Dear Chapters</span>
+        <span class="brand-subtitle">MAKE ROOM FOR EVERY CHAPTER</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#editions">The editions</a>
+        <a href="#previews">Inside the planner</a>
+        <a href="index.html#story">Our story</a>
+        <a href="index.html#faq">FAQs</a>
+      </nav>
+
+      <a href="#purchase" class="nav-cta">
+        Explore Coquette Edition <span>↗</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
     </div>
+  </header>
 
-    <div class="coquette-hero-content">
 
-      <div class="coquette-eyebrow">
-        03 — A SOFTER CHAPTER
+  <main>
+
+    <div class="coquette-main">
+
+      <!-- BREADCRUMB -->
+
+      <div class="coquette-breadcrumb">
+        <a href="index.html">Home</a>
+        &nbsp; / &nbsp;
+        <a href="index.html#editions">The Collection</a>
+        &nbsp; / &nbsp;
+        Coquette Edition
       </div>
 
-      <h1>Soft, romantic<br>and playful.</h1>
+
+      <!-- COQUETTE HERO -->
+
+      <section class="coquette-hero">
+
+        <div>
+          <div class="coquette-cover-wrap">
+            <img
+              class="coquette-cover"
+              src="assets/products/coquette-cover.jpg"
+              alt="Dear Chapters Coquette Edition romantic planner cover"
+            >
+          </div>
+
+          <p class="coquette-cover-caption">
+            A softer, more romantic chapter.
+          </p>
+        </div>
+
+
+        <div class="coquette-copy">
+
+          <span class="eyebrow">
+            03 / THE COQUETTE EDITION
+          </span>
+
+          <h1>Coquette<br>Edition.</h1>
+
+          <p class="coquette-subtitle">
+            Soft. Romantic. Playful.
+          </p>
+
+          <p class="coquette-description">
+            A romantic, feminine expression of the Dear Chapters
+            planner, with every practical planning section still
+            in place. Thoughtfully designed to bring a little
+            beauty into the way you organise your everyday life.
+          </p>
+
+          <div class="coquette-note">
+            BLUSH PINK · A SOFTER CHAPTER
+          </div>
+
+          <div class="coquette-actions">
+
+            <a href="#previews" class="coquette-button">
+              Explore the pages <span>↓</span>
+            </a>
+
+            <a href="index.html#editions" class="coquette-button coquette-button-secondary">
+              All editions <span>↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <div class="coquette-divider"></div>
+
+
+      <!-- INTERIOR PREVIEWS -->
+
+      <section class="coquette-section" id="previews">
+
+        <div class="section-topline">
+          <span class="eyebrow">03 / INSIDE THE COQUETTE EDITION</span>
+          <span class="section-side-note">A CLOSER LOOK AT THE PAGES</span>
+        </div>
+
+        <div class="coquette-section-heading">
+
+          <div>
+            <h2>A little room<br>for <em>everything.</em></h2>
+          </div>
+
+          <p>
+            Explore a selection of the pages
+            that make up the Coquette planning experience.
+          </p>
+
+        </div>
+
+
+        <div class="coquette-preview-grid">
+
+          <!-- START -->
+
+          <article class="coquette-preview-card">
+
+            <div class="coquette-preview-image">
+              <img
+                src="assets/products/start-coq.jpg"
+                alt="Coquette Edition Start planner pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="coquette-preview-caption">
+              <span class="coquette-preview-number">01</span>
+
+              <div>
+                <h3>Start</h3>
+                <p>A place to begin with intention.</p>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- MONTH -->
+
+          <article class="coquette-preview-card">
+
+            <div class="coquette-preview-image">
+              <img
+                src="assets/products/month-coq.jpg"
+                alt="Coquette Edition monthly planning pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="coquette-preview-caption">
+              <span class="coquette-preview-number">02</span>
+
+              <div>
+                <h3>Month</h3>
+                <p>Give each month a thoughtful direction.</p>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- QUARTER -->
+
+          <article class="coquette-preview-card">
+
+            <div class="coquette-preview-image">
+              <img
+                src="assets/products/quarter-coq.jpg"
+                alt="Coquette Edition quarterly planning pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="coquette-preview-caption">
+              <span class="coquette-preview-number">03</span>
+
+              <div>
+                <h3>Quarter</h3>
+                <p>Step back and see the bigger picture.</p>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- MONEY -->
+
+          <article class="coquette-preview-card">
+
+            <div class="coquette-preview-image">
+              <img
+                src="assets/products/money-coq.jpg"
+                alt="Coquette Edition money and budget planning pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="coquette-preview-caption">
+              <span class="coquette-preview-number">04</span>
+
+              <div>
+                <h3>Money</h3>
+                <p>A little more clarity for your finances.</p>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- SAME CONTENT, DIFFERENT AESTHETICS -->
+
+    <section class="coquette-feature-strip">
+
+      <span class="eyebrow">ONE PLANNING SYSTEM</span>
+
+      <h2>Made for every<br><em>chapter of you.</em></h2>
 
       <p>
-        A romantic, feminine expression of the Dear Chapters
-        planner, with every practical planning section still
-        in place. Thoughtfully designed to bring a little
-        beauty into the way you organise your everyday life.
+        The Coquette Edition shares the same planner content
+        and planning sections as our Signature, Minimalist
+        and Luxury editions. Choose the aesthetic that
+        feels most like you.
       </p>
 
-      <a href="#details" class="coquette-button">
-        EXPLORE THE PLANNER
-      </a>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- INTERIOR PREVIEW SECTION -->
+    <!-- PURCHASE -->
 
-  <section class="coquette-section">
+    <section class="coquette-main">
 
-    <div class="coquette-section-heading">
+      <div class="coquette-purchase" id="purchase">
 
-      <span>INSIDE THE PLANNER</span>
+        <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
 
-      <h2>A closer look</h2>
+        <h2>Make room for<br><em>what matters.</em></h2>
 
-      <p class="coquette-intro">
-        From getting started to planning your months,
-        mapping out your year and keeping track of your
-        finances, every section has its place.
-      </p>
+        <p>
+          Bring your plans, priorities and everyday moments
+          into one thoughtful digital planning space.
+        </p>
 
-    </div>
-
-    <div class="coquette-preview-grid">
-
-      <div class="coquette-preview">
-        <img
-          src="assets/products/start-coq.jpg"
-          alt="Coquette Start section preview"
+        <a
+          href="https://payhip.com/b/fzme7"
+          class="coquette-button"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-        <div class="coquette-preview-label">START</div>
+          Purchase the Full Edition <span>↗</span>
+        </a>
+
       </div>
 
-      <div class="coquette-preview">
-        <img
-          src="assets/products/month-coq.jpg"
-          alt="Coquette Month section preview"
-        >
-        <div class="coquette-preview-label">MONTH</div>
-      </div>
-
-      <div class="coquette-preview">
-        <img
-          src="assets/products/quarter-coq.jpg"
-          alt="Coquette Quarter section preview"
-        >
-        <div class="coquette-preview-label">QUARTER</div>
-      </div>
-
-      <div class="coquette-preview">
-        <img
-          src="assets/products/money-coq.jpg"
-          alt="Coquette Money section preview"
-        >
-        <div class="coquette-preview-label">MONEY</div>
-      </div>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- EDITION FEATURES -->
-
-  <section class="coquette-feature">
-
-    <h2>Romance in the details. Clarity in the everyday.</h2>
-
-    <p>
-      Every Dear Chapters edition contains the same thoughtfully
-      designed planning system and features. Choose the aesthetic
-      that feels most like you.
-    </p>
-
-  </section>
-
-
-  <!-- PRODUCT DETAILS -->
-
-  <section class="coquette-section" id="details">
-
-    <div class="coquette-section-heading">
-
-      <span>THE DETAILS</span>
-
-      <h2>Made for everyday life</h2>
-
-    </div>
-
-    <div class="coquette-details">
-
-      <div class="coquette-detail-row">
-        <span>FORMAT</span>
-        <span>Digital planner</span>
-      </div>
-
-      <div class="coquette-detail-row">
-        <span>DESIGNED FOR</span>
-        <span>iPad & digital note-taking apps</span>
-      </div>
-
-      <div class="coquette-detail-row">
-        <span>LAYOUT</span>
-        <span>Landscape</span>
-      </div>
-
-      <div class="coquette-detail-row">
-        <span>CONTENT</span>
-        <span>All-in-one life planning system</span>
-      </div>
-
-      <div class="coquette-detail-row">
-        <span>EDITION</span>
-        <span>Coquette</span>
-      </div>
-
-      <div class="coquette-detail-row">
-        <span>DELIVERY</span>
-        <span>Digital download</span>
-      </div>
-
-    </div>
-
-    <div class="coquette-price">
-      <small>INTRODUCTORY PRICE</small>
-      RM55.90
-    </div>
-
-    <div style="text-align:center;">
-      <a href="#details" class="coquette-button">
-        DISCOVER THE DETAILS
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- CLOSING SECTION -->
-
-  <section class="coquette-feature">
-
-    <h2>Make room for every chapter.</h2>
-
-    <p>
-      A little more beauty in your plans.
-      A little more space for everything that matters.
-    </p>
-
-  </section>
+  </main>
 
 
   <!-- FOOTER -->
 
   <footer class="coquette-footer">
 
-    <div class="coquette-footer-brand">Dear Chapters</div>
+    <div class="coquette-footer-inner">
 
-    <div class="coquette-footer-tagline">
-      Make room for every chapter.
-    </div>
+      <a href="index.html" class="coquette-footer-brand">DEAR CHAPTERS</a>
 
-    <div class="coquette-socials">
+      <p class="coquette-footer-tagline">Make room for every chapter.</p>
 
-      <!-- Threads -->
+      <div class="coquette-socials">
 
-      <a
-        href="https://www.threads.net/@dearchapters.co"
-        class="coquette-social-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Dear Chapters on Threads"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M18.2 8.7c-.7-3.1-2.8-4.8-6.1-4.8-4.2 0-6.7 3-6.7 8.1 0 5.3 2.5 8.1 6.8 8.1 3.3 0 5.5-1.8 5.5-4.6 0-2.5-1.8-4-4.8-4-2.1 0-3.5.9-3.5 2.4 0 1.2.9 2 2.2 2 1.7 0 2.8-1.3 2.8-3.3 0-2.2-1.2-3.7-3.2-3.7"/>
-          <path d="M13.9 11.1c2.1.1 4.2.7 5.8 1.8"/>
-        </svg>
-        <span>Threads</span>
+        <!-- THREADS -->
+
+        <a
+          href="https://www.threads.net/@dearchapters.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Dear Chapters on Threads"
+          class="coquette-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/>
+          </svg>
+          <span>Threads</span>
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/dearchapters.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Dear Chapters on Instagram"
+          class="coquette-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:dearchapters.co@gmail.com"
+          aria-label="Email Dear Chapters"
+          class="coquette-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Email</span>
+        </a>
+
+      </div>
+
+      <a href="mailto:dearchapters.co@gmail.com" class="coquette-footer-email">
+        dearchapters.co@gmail.com
       </a>
 
-      <!-- Instagram -->
+      <p class="coquette-footer-copyright">
+        © 2026 Dear Chapters. All rights reserved.
+      </p>
 
-      <a
-        href="https://www.instagram.com/dearchapters.co/"
-        class="coquette-social-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Dear Chapters on Instagram"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17.6" cy="6.7" r="0.8" fill="currentColor" stroke="none"/>
-        </svg>
-        <span>Instagram</span>
+      <a href="index.html" class="coquette-footer-back">
+        ← Back to the collection
       </a>
 
-      <!-- Email -->
-
-      <a
-        href="mailto:dearchapters.co@gmail.com"
-        class="coquette-social-link"
-        aria-label="Email Dear Chapters"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
-          <path d="m4 7 8 6 8-6"/>
-        </svg>
-        <span>Email</span>
-      </a>
-
-    </div>
-
-    <a class="coquette-footer-email" href="mailto:dearchapters.co@gmail.com">
-      dearchapters.co@gmail.com
-    </a>
-
-    <div class="coquette-footer-copyright">
-      © 2026 Dear Chapters. All rights reserved.
     </div>
 
   </footer>
 
-</div>
+
+  <!-- MOBILE NAVIGATION -->
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
+  </script>
 
 </body>
 </html>
