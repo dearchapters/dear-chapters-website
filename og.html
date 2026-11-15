@@ -343,29 +343,92 @@
     /* FOOTER */
 
     .og-footer {
-      padding: 28px 7%;
+      padding: 38px 7%;
       border-top: 1px solid var(--og-line);
+      text-align: center;
     }
 
     .og-footer-inner {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 10px;
       max-width: 1440px;
       margin: auto;
     }
 
-    .og-footer p {
-      margin: 0;
-      color: var(--og-muted);
-      font-size: 8px;
-      letter-spacing: 1px;
+    .og-footer-brand {
+      color: var(--og-text) !important;
+      font-family: var(--serif);
+      font-size: 24px !important;
+      letter-spacing: 2px;
+      font-weight: 500;
     }
 
-    .og-footer a {
-      color: #8F7474;
+    .og-footer-tagline {
+      margin: 0;
+      color: var(--og-muted);
       font-size: 9px;
+      letter-spacing: .7px;
+    }
+
+    .og-socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 27px;
+      margin: 18px 0 8px;
+    }
+
+    .og-social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #8F7474 !important;
+      font-size: 9px !important;
+      letter-spacing: .7px;
+      transition: color .25s ease;
+    }
+
+    .og-social-link:hover,
+    .og-footer-back:hover {
+      color: var(--og-text) !important;
+    }
+
+    .og-social-link svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
+
+    .og-footer-email {
+      color: #8F7474 !important;
+      font-size: 10px !important;
+      letter-spacing: .3px;
+    }
+
+    .og-footer-copyright {
+      margin: 12px 0 0;
+      color: var(--og-muted);
+      font-size: 8px;
+      letter-spacing: .8px;
+    }
+
+    .og-footer-back {
+      margin-top: 8px;
+      color: #8F7474 !important;
+      font-size: 9px !important;
+    }
+
+    @media (max-width: 430px) {
+      .og-socials {
+        gap: 17px;
+      }
+
+      .og-social-link {
+        font-size: 8px !important;
+      }
     }
 
     /* TABLET */
@@ -737,9 +800,68 @@
 
     <div class="og-footer-inner">
 
-      <p>© 2027 DEAR CHAPTERS · MAKE ROOM FOR EVERY CHAPTER</p>
+      <a href="index.html" class="og-footer-brand">DEAR CHAPTERS</a>
 
-      <a href="index.html">← Back to the collection</a>
+      <p class="og-footer-tagline">Make room for every chapter.</p>
+
+      <div class="og-socials">
+
+        <!-- THREADS -->
+        <a
+          href="https://www.threads.net/@dearchapters.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Dear Chapters on Threads"
+          class="og-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/>
+          </svg>
+          <span>Threads</span>
+        </a>
+
+        <!-- INSTAGRAM -->
+        <a
+          href="https://www.instagram.com/dearchapters.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Dear Chapters on Instagram"
+          class="og-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+        <!-- EMAIL -->
+        <a
+          href="mailto:dearchapters.co@gmail.com"
+          aria-label="Email Dear Chapters"
+          class="og-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Email</span>
+        </a>
+
+      </div>
+
+      <a href="mailto:dearchapters.co@gmail.com" class="og-footer-email">
+        dearchapters.co@gmail.com
+      </a>
+
+      <p class="og-footer-copyright">
+        © 2026 Dear Chapters. All rights reserved.
+      </p>
+
+      <a href="index.html" class="og-footer-back">
+        ← Back to the collection
+      </a>
 
     </div>
 
