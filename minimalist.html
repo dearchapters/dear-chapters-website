@@ -225,12 +225,75 @@
     /* Footer */
 
     .minimalist-footer {
-      padding: 35px 7%;
+      padding: 42px 7% 30px;
       text-align: center;
       border-top: 1px solid rgba(65,66,57,0.12);
-      font-size: 10px;
-      letter-spacing: 2px;
       color: var(--edition-muted);
+    }
+
+    .minimalist-footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      letter-spacing: 1px;
+      color: var(--edition-text);
+      margin-bottom: 7px;
+    }
+
+    .minimalist-footer-tagline {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .minimalist-socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin: 0 auto 18px;
+    }
+
+    .minimalist-social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--edition-text);
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 1px;
+      transition: opacity 0.2s ease;
+    }
+
+    .minimalist-social-link:hover {
+      opacity: 0.65;
+    }
+
+    .minimalist-social-link svg {
+      width: 17px;
+      height: 17px;
+      display: block;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .minimalist-footer-email {
+      display: inline-block;
+      color: var(--edition-muted);
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      margin-bottom: 22px;
+    }
+
+    .minimalist-footer-copyright {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     /* Mobile */
@@ -256,6 +319,19 @@
 
       .minimalist-nav {
         padding: 20px 6%;
+      }
+
+      .minimalist-nav a {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .minimalist-footer {
+        padding: 35px 6% 25px;
+      }
+
+      .minimalist-socials {
+        gap: 16px;
       }
     }
   </style>
@@ -444,11 +520,75 @@
   <!-- FOOTER -->
 
   <footer class="minimalist-footer">
-    DEAR CHAPTERS · MAKE ROOM FOR EVERY CHAPTER
+
+    <div class="minimalist-footer-brand">Dear Chapters</div>
+
+    <div class="minimalist-footer-tagline">
+      Make room for every chapter.
+    </div>
+
+    <div class="minimalist-socials">
+
+      <!-- Threads -->
+
+      <a
+        href="https://www.threads.net/@dearchapters.co"
+        class="minimalist-social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Dear Chapters on Threads"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18.2 8.7c-.7-3.1-2.8-4.8-6.1-4.8-4.2 0-6.7 3-6.7 8.1 0 5.3 2.5 8.1 6.8 8.1 3.3 0 5.5-1.8 5.5-4.6 0-2.5-1.8-4-4.8-4-2.1 0-3.5.9-3.5 2.4 0 1.2.9 2 2.2 2 1.7 0 2.8-1.3 2.8-3.3 0-2.2-1.2-3.7-3.2-3.7"/>
+          <path d="M13.9 11.1c2.1.1 4.2.7 5.8 1.8"/>
+        </svg>
+        <span>Threads</span>
+      </a>
+
+      <!-- Instagram -->
+
+      <a
+        href="https://www.instagram.com/dearchapters.co/"
+        class="minimalist-social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Dear Chapters on Instagram"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.6" cy="6.7" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+
+      <!-- Email -->
+
+      <a
+        href="mailto:dearchapters.co@gmail.com"
+        class="minimalist-social-link"
+        aria-label="Email Dear Chapters"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+          <path d="m4 7 8 6 8-6"/>
+        </svg>
+        <span>Email</span>
+      </a>
+
+    </div>
+
+    <a class="minimalist-footer-email" href="mailto:dearchapters.co@gmail.com">
+      dearchapters.co@gmail.com
+    </a>
+
+    <div class="minimalist-footer-copyright">
+      © 2026 Dear Chapters. All rights reserved.
+    </div>
+
   </footer>
 
 </div>
 
 </body>
 </html>
-
