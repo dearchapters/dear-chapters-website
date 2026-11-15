@@ -4,453 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>OG Edition — Dear Chapters</title>
-  <meta name="description" content="Discover the Dear Chapters OG Edition: a blush and beige digital planner for every chapter of your life.">
+  <title>Dear Chapters — 2027 Digital Planner</title>
+  <meta name="description" content="A thoughtful digital planning space for every part of you. Discover the Dear Chapters 2027 digital planner collection.">
   <meta name="theme-color" content="#F5F0E9">
+  <meta property="og:title" content="Dear Chapters — Make Room for Every Chapter">
+  <meta property="og:description" content="For the many hats you wear every day.">
+  <meta property="og:image" content="assets/products/og-cover.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    :root {
-      --og-bg: #F5F0E9;
-      --og-card: #FFFCFA;
-      --og-text: #4A3F44;
-      --og-muted: #9A8A8E;
-      --og-accent: #BF8587;
-      --og-line: rgba(74, 63, 68, 0.14);
-    }
-
-    body {
-      background: var(--og-bg);
-      color: var(--og-text);
-    }
-
-    .site-header {
-      background: rgba(251, 245, 240, 0.96);
-    }
-
-    .announcement {
-      background: var(--og-text);
-    }
-
-    .announcement span {
-      color: #DB9EAD;
-    }
-
-    .og-main {
-      max-width: 1440px;
-      margin: auto;
-      padding: 0 7%;
-    }
-
-    .og-breadcrumb {
-      padding: 27px 0;
-      color: var(--og-muted);
-      font-size: 9px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
-
-    .og-breadcrumb a:hover {
-      color: var(--og-accent);
-    }
-
-    .og-hero {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      align-items: center;
-      gap: 9%;
-      padding: 45px 0 100px;
-    }
-
-    /* BOOK COVER BACKGROUND — DEEP DUSTY PINK */
-    .og-cover-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 35px;
-      background: #A85F70;
-    }
-
-    .og-cover {
-      width: 100%;
-      max-width: 510px;
-      max-height: 660px;
-      object-fit: contain;
-      object-position: center;
-    }
-
-    .og-cover-caption {
-      margin-top: 15px;
-      color: var(--og-muted);
-      font-family: var(--serif);
-      font-size: 14px;
-      font-style: italic;
-      text-align: center;
-    }
-
-    .og-copy .eyebrow {
-      color: #8F7474;
-    }
-
-    .og-copy h1 {
-      margin: 23px 0 10px;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(55px, 6vw, 82px);
-      font-weight: 400;
-      line-height: 0.95;
-      letter-spacing: -2px;
-    }
-
-    .og-subtitle {
-      margin: 0 0 27px;
-      color: var(--og-accent);
-      font-family: var(--serif);
-      font-size: 25px;
-      font-style: italic;
-    }
-
-    .og-description {
-      max-width: 410px;
-      color: var(--og-muted);
-      font-size: 11px;
-      line-height: 2.2;
-    }
-
-    .og-note {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 30px;
-      color: var(--og-muted);
-      font-size: 9px;
-      letter-spacing: 1px;
-    }
-
-    .og-note::before {
-      content: "";
-      width: 28px;
-      height: 1px;
-      background: var(--og-accent);
-    }
-
-    .og-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 34px;
-    }
-
-    .og-button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      min-height: 48px;
-      padding: 13px 22px;
-      border: 1px solid var(--og-accent);
-      background: var(--og-accent);
-      color: white;
-      font-size: 9px;
-      letter-spacing: 0.5px;
-      transition: 0.25s ease;
-    }
-
-    .og-button:hover {
-      background: #8F7474;
-      border-color: #8F7474;
-    }
-
-    .og-button-secondary {
-      background: transparent;
-      color: #8F7474;
-    }
-
-    .og-button-secondary:hover {
-      background: var(--og-card);
-      color: var(--og-text);
-    }
-
-    .og-divider {
-      height: 1px;
-      background: var(--og-line);
-    }
-
-    .og-section {
-      padding: 90px 0;
-    }
-
-    .og-section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 30px;
-      margin-bottom: 45px;
-    }
-
-    .og-section-heading h2 {
-      margin: 15px 0 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(39px, 4.5vw, 60px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .og-section-heading h2 em {
-      color: var(--og-accent);
-      font-weight: 400;
-    }
-
-    .og-section-heading p {
-      max-width: 260px;
-      margin: 0;
-      color: var(--og-muted);
-      font-size: 10px;
-      line-height: 2;
-    }
-
-    .og-preview-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 45px 28px;
-    }
-
-    .og-preview-card {
-      min-width: 0;
-    }
-
-    .og-preview-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 220px;
-      padding: 18px;
-      overflow: hidden;
-      background: var(--og-card);
-      border: 1px solid rgba(74, 63, 68, 0.06);
-    }
-
-    .og-preview-image img {
-      width: 100%;
-      height: auto;
-      max-height: 480px;
-      object-fit: contain;
-      object-position: center;
-    }
-
-    .og-preview-caption {
-      display: flex;
-      align-items: flex-start;
-      gap: 17px;
-      padding-top: 17px;
-    }
-
-    .og-preview-number {
-      padding-top: 5px;
-      color: var(--og-accent);
-      font-family: var(--serif);
-      font-size: 18px;
-    }
-
-    .og-preview-caption h3 {
-      margin: 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 400;
-    }
-
-    .og-preview-caption p {
-      margin: 3px 0 0;
-      color: var(--og-muted);
-      font-size: 10px;
-    }
-
-    .og-feature-strip {
-      padding: 65px 7%;
-      background: #F6E9E2;
-      text-align: center;
-    }
-
-    .og-feature-strip h2 {
-      margin: 15px 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(35px, 4vw, 52px);
-      font-weight: 400;
-    }
-
-    .og-feature-strip h2 em {
-      color: var(--og-accent);
-    }
-
-    .og-feature-strip p {
-      max-width: 520px;
-      margin: auto;
-      color: #85777A;
-      font-size: 10px;
-      line-height: 2.1;
-    }
-
-    .og-purchase {
-      padding: 95px 0 110px;
-      text-align: center;
-    }
-
-    .og-purchase h2 {
-      margin: 17px 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(42px, 5vw, 65px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .og-purchase h2 em {
-      color: var(--og-accent);
-    }
-
-    .og-purchase p {
-      max-width: 440px;
-      margin: 0 auto 25px;
-      color: var(--og-muted);
-      font-size: 10px;
-      line-height: 2;
-    }
-
-    .og-coming-soon {
-      margin-top: 17px;
-      color: var(--og-muted);
-      font-size: 8px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .og-footer {
-      padding: 28px 7%;
-      border-top: 1px solid var(--og-line);
-    }
-
-    .og-footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      max-width: 1440px;
-      margin: auto;
-    }
-
-    .og-footer p {
-      margin: 0;
-      color: var(--og-muted);
-      font-size: 8px;
-      letter-spacing: 1px;
-    }
-
-    .og-footer a {
-      color: #8F7474;
-      font-size: 9px;
-    }
-
-    @media (max-width: 800px) {
-      .og-hero {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        padding: 25px 0 70px;
-      }
-
-      .og-cover-wrap {
-        padding: 20px;
-      }
-
-      .og-cover {
-        max-height: 530px;
-      }
-
-      .og-copy {
-        text-align: center;
-      }
-
-      .og-description {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .og-note,
-      .og-actions {
-        justify-content: center;
-      }
-
-      .og-section {
-        padding: 65px 0;
-      }
-
-      .og-section-heading {
-        display: block;
-      }
-
-      .og-section-heading p {
-        margin-top: 20px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .og-main {
-        padding: 0 5%;
-      }
-
-      .og-preview-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .og-preview-image {
-        min-height: 160px;
-        padding: 12px;
-      }
-
-      .og-preview-image img {
-        max-height: 380px;
-      }
-
-      .og-footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
+  <!-- ANNOUNCEMENT -->
   <div class="announcement">
     THE 2027 COLLECTION <span>✳</span> MAKE ROOM FOR EVERY CHAPTER
   </div>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
 
-      <a href="index.html" class="brand">
+      <a href="#" class="brand">
         <span class="brand-name">Dear Chapters</span>
         <span class="brand-subtitle">MAKE ROOM FOR EVERY CHAPTER</span>
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html#editions">The editions</a>
-        <a href="#previews">Inside the planner</a>
-        <a href="index.html#story">Our story</a>
-        <a href="index.html#faq">FAQs</a>
+        <a href="#editions">The editions</a>
+        <a href="#inside">Inside the planner</a>
+        <a href="#story">Our story</a>
+        <a href="#faq">FAQs</a>
       </nav>
 
-      <a href="#purchase" class="nav-cta">
-        Explore OG Edition <span>↗</span>
+      <a href="#pricing" class="nav-cta">
+        Find your planner <span>↗</span>
       </a>
 
       <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -460,237 +52,631 @@
     </div>
   </header>
 
+
   <main>
 
-    <div class="og-main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
 
-      <div class="og-breadcrumb">
-        <a href="index.html">Home</a>
-        &nbsp; / &nbsp;
-        <a href="index.html#editions">The Collection</a>
-        &nbsp; / &nbsp;
-        OG Edition
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span></span> A PLANNING SPACE FOR EVERY PART OF YOU
+          </p>
+
+          <h1>
+            For the many hats<br>
+            <em>you wear every day.</em>
+          </h1>
+
+          <p class="hero-tagline">Make room for every chapter.</p>
+
+          <p class="hero-description">
+            A considered space for your plans, priorities,
+            ambitions and all the little things in between.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#editions" class="button button-dark">
+              Explore the collection <span>↗</span>
+            </a>
+            <a href="#inside" class="underlined-link">
+              Take a look inside
+            </a>
+          </div>
+
+          <div class="hero-footnote">
+            <span class="footnote-line"></span>
+            <span>THE 2027 DIGITAL PLANNER</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrap">
+            <div class="ipad-frame">
+              <div class="ipad-camera"></div>
+              <div class="ipad-screen">
+                <img
+                  src="assets/products/hero-image.jpg"
+                  alt="Dear Chapters digital planner displayed on an iPad"
+                  fetchpriority="high"
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="image-caption">
+            A little more intention, in every direction.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDITORIAL INTRO -->
+    <section class="intro-strip">
+      <div class="intro-strip-inner">
+        <span class="eyebrow">A NOTE TO SELF</span>
+
+        <p>
+          You are allowed to have many chapters.
+          <em>Give each one a little room.</em>
+        </p>
+
+        <span class="intro-mark">DC — 27</span>
+      </div>
+    </section>
+
+
+    <!-- COLLECTION -->
+    <section class="editions section-pad" id="editions">
+
+      <div class="section-topline">
+        <span class="eyebrow">01 / THE COLLECTION</span>
+        <span class="section-side-note">FOUR EXPRESSIONS · ONE PLANNING SYSTEM</span>
       </div>
 
-      <!-- OG HERO -->
-      <section class="og-hero">
-
+      <div class="section-title-row">
         <div>
-          <div class="og-cover-wrap">
-            <img
-              class="og-cover"
-              src="assets/products/og-cover.jpg"
-              alt="Dear Chapters OG Edition blush and beige planner cover"
-            >
+          <h2>Find the one that<br><em>feels like you.</em></h2>
+        </div>
+
+        <p class="section-intro">
+          Four distinct aesthetics, thoughtfully designed
+          around the same complete planning experience.
+        </p>
+      </div>
+
+      <div class="edition-grid">
+
+        <!-- OG EDITION -->
+        <article class="edition-card">
+          <a href="og.html" class="edition-image-link" aria-label="Choose the OG Edition">
+            <div class="edition-image edition-og">
+              <img src="assets/products/og-cover.jpg" alt="OG Edition planner cover" loading="lazy">
+              <span class="edition-image-number">01</span>
+            </div>
+          </a>
+
+          <div class="edition-info">
+            <div>
+              <span class="edition-kicker">THE SIGNATURE</span>
+              <h3>OG Edition</h3>
+            </div>
+            <a href="og.html" class="edition-arrow" aria-label="View OG Edition">↗</a>
           </div>
 
-          <p class="og-cover-caption">
-            The original Dear Chapters aesthetic.
-          </p>
-        </div>
+          <p>Warm, timeless and unmistakably Dear Chapters.</p>
+        </article>
 
-        <div class="og-copy">
 
-          <span class="eyebrow">
-            01 / THE SIGNATURE EDITION
-          </span>
+        <!-- MINIMALIST EDITION -->
+        <article class="edition-card">
+          <a href="minimalist.html" class="edition-image-link" aria-label="Choose the Minimalist Edition">
+            <div class="edition-image edition-minimalist">
+              <img src="assets/products/minimalist-cover.jpg" alt="Minimalist Edition planner cover" loading="lazy">
+              <span class="edition-image-number">02</span>
+            </div>
+          </a>
 
-          <h1>OG<br>Edition.</h1>
-
-          <p class="og-subtitle">
-            Original. Thoughtful. Timeless.
-          </p>
-
-          <p class="og-description">
-            A soft blush-and-beige planning space designed
-            to bring every part of your life together.
-            From your yearly intentions to the little details
-            of everyday living, make room for every chapter.
-          </p>
-
-          <div class="og-note">
-            BLUSH & BEIGE · THE ORIGINAL PALETTE
+          <div class="edition-info">
+            <div>
+              <span class="edition-kicker">THE QUIET EDIT</span>
+              <h3>Minimalist Edition</h3>
+            </div>
+            <a href="minimalist.html" class="edition-arrow" aria-label="View Minimalist Edition">↗</a>
           </div>
 
-          <div class="og-actions">
+          <p>Clean lines, considered details and room to breathe.</p>
+        </article>
 
-            <a href="#previews" class="og-button">
-              Explore the pages <span>↓</span>
-            </a>
 
-            <a href="index.html#editions" class="og-button og-button-secondary">
-              All editions <span>↗</span>
-            </a>
+        <!-- COQUETTE EDITION -->
+        <article class="edition-card">
+          <a href="#pricing" class="edition-image-link" aria-label="Choose the Coquette Edition">
+            <div class="edition-image edition-coquette">
+              <img src="assets/products/coquette-cover.jpg" alt="Coquette Edition planner cover" loading="lazy">
+              <span class="edition-image-number">03</span>
+            </div>
+          </a>
 
+          <div class="edition-info">
+            <div>
+              <span class="edition-kicker">THE ROMANTIC EDIT</span>
+              <h3>Coquette Edition</h3>
+            </div>
+            <a href="#pricing" class="edition-arrow" aria-label="View Coquette Edition">↗</a>
           </div>
 
-        </div>
+          <p>Soft details and a little everyday romance.</p>
+        </article>
 
-      </section>
 
-      <div class="og-divider"></div>
+        <!-- LUXURY EDITION -->
+        <article class="edition-card">
+          <a href="#pricing" class="edition-image-link" aria-label="Choose the Luxury Edition">
+            <div class="edition-image edition-luxury">
+              <img src="assets/products/luxury-cover.jpg" alt="Luxury Edition planner cover" loading="lazy">
+              <span class="edition-image-number">04</span>
+            </div>
+          </a>
 
-      <!-- INTERIOR PREVIEWS -->
-      <section class="og-section" id="previews">
-
-        <div class="section-topline">
-          <span class="eyebrow">02 / INSIDE THE OG EDITION</span>
-          <span class="section-side-note">A CLOSER LOOK AT THE PAGES</span>
-        </div>
-
-        <div class="og-section-heading">
-          <div>
-            <h2>A little room<br>for <em>everything.</em></h2>
+          <div class="edition-info">
+            <div>
+              <span class="edition-kicker">THE REFINED EDIT</span>
+              <h3>Luxury Edition</h3>
+            </div>
+            <a href="#pricing" class="edition-arrow" aria-label="View Luxury Edition">↗</a>
           </div>
 
-          <p>
-            Explore a selection of the pages
-            that make up the OG planning experience.
-          </p>
+          <p>Rich, polished and quietly sophisticated.</p>
+        </article>
+
+      </div>
+
+      <div class="collection-note">
+        <span>✳</span>
+        Every edition includes the same pages, features and planning sections.
+      </div>
+
+    </section>
+
+
+    <!-- A CLOSER LOOK: SWIPEABLE CAROUSEL -->
+    <section class="inside section-pad" id="inside">
+
+      <div class="section-topline">
+        <span class="eyebrow">02 / A CLOSER LOOK</span>
+        <span class="section-side-note">A PLACE FOR ALL YOUR CHAPTERS</span>
+      </div>
+
+      <div class="section-title-row">
+        <div>
+          <h2>More than a calendar.<br><em>A space for your life.</em></h2>
         </div>
 
-        <div class="og-preview-grid">
+        <p class="section-intro">
+          Seven thoughtfully curated spaces to bring
+          your everyday life into focus.
+        </p>
+      </div>
 
-          <article class="og-preview-card">
-            <div class="og-preview-image">
-              <img
-                src="assets/products/start-preview.jpg"
-                alt="OG Edition Start planner pages"
-                loading="lazy"
-              >
-            </div>
+      <div class="gallery-controls">
+        <span class="gallery-label">EXPLORE THE PLANNER</span>
 
-            <div class="og-preview-caption">
-              <span class="og-preview-number">01</span>
-              <div>
-                <h3>Start</h3>
-                <p>A place to begin with intention.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="og-preview-card">
-            <div class="og-preview-image">
-              <img
-                src="assets/products/year-preview.jpg"
-                alt="OG Edition yearly planning pages"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="og-preview-caption">
-              <span class="og-preview-number">02</span>
-              <div>
-                <h3>Year</h3>
-                <p>See the bigger picture.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="og-preview-card">
-            <div class="og-preview-image">
-              <img
-                src="assets/products/cycle-preview.jpg"
-                alt="OG Edition monthly and weekly planning pages"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="og-preview-caption">
-              <span class="og-preview-number">03</span>
-              <div>
-                <h3>Planning Cycles</h3>
-                <p>Bring your days and weeks into focus.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="og-preview-card">
-            <div class="og-preview-image">
-              <img
-                src="assets/products/budget-preview.jpg"
-                alt="OG Edition money planning pages"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="og-preview-caption">
-              <span class="og-preview-number">04</span>
-              <div>
-                <h3>Money</h3>
-                <p>A little more clarity for your finances.</p>
-              </div>
-            </div>
-          </article>
-
+        <div class="gallery-arrows">
+          <button class="gallery-prev" type="button" aria-label="Previous planner section">←</button>
+          <button class="gallery-next" type="button" aria-label="Next planner section">→</button>
         </div>
+      </div>
 
-      </section>
+      <div class="inside-gallery">
 
-    </div>
+        <article class="inside-item">
+          <img src="assets/products/wellness-preview.jpg" alt="Wellness planner pages" loading="lazy">
+          <div class="inside-caption">
+            <span>01</span>
+            <div>
+              <h3>Wellness</h3>
+              <p>Make space for yourself.</p>
+            </div>
+          </div>
+        </article>
 
-    <!-- SAME CONTENT, DIFFERENT AESTHETICS -->
-    <section class="og-feature-strip">
+        <article class="inside-item">
+          <img src="assets/products/self-preview.jpg" alt="Self-development planner pages" loading="lazy">
+          <div class="inside-caption">
+            <span>02</span>
+            <div>
+              <h3>Self</h3>
+              <p>Grow at your own pace.</p>
+            </div>
+          </div>
+        </article>
 
-      <span class="eyebrow">ONE PLANNING SYSTEM</span>
+        <article class="inside-item">
+          <img src="assets/products/home-preview.jpg" alt="Home planner pages" loading="lazy">
+          <div class="inside-caption">
+            <span>03</span>
+            <div>
+              <h3>Home</h3>
+              <p>Make room for everyday living.</p>
+            </div>
+          </div>
+        </article>
 
-      <h2>Made for every<br><em>chapter of you.</em></h2>
+        <article class="inside-item">
+          <img src="assets/products/work-preview.jpg" alt="Work planner pages" loading="lazy">
+          <div class="inside-caption">
+            <span>04</span>
+            <div>
+              <h3>Work</h3>
+              <p>Give your ambitions direction.</p>
+            </div>
+          </div>
+        </article>
 
-      <p>
-        The OG Edition shares the same planner content
-        and planning sections as our Minimalist, Coquette
-        and Luxury editions. Choose the aesthetic that
-        feels most like you.
+        <article class="inside-item">
+          <img src="assets/products/money-preview.jpg" alt="Money planner pages" loading="lazy">
+          <div class="inside-caption">
+            <span>05</span>
+            <div>
+              <h3>Money</h3>
+              <p>Plan with a little more clarity.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="inside-item">
+          <img src="assets/products/journal-preview.jpg" alt="Journal planner pages" loading="lazy">
+          <div class="inside-caption">
+            <span>06</span>
+            <div>
+              <h3>Journal</h3>
+              <p>Keep the moments that matter.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="inside-item inside-notes">
+          <img src="assets/products/notes-preview.jpg" alt="Notes planner pages" loading="lazy">
+          <div class="inside-caption">
+            <span>07</span>
+            <div>
+              <h3>Notes</h3>
+              <p>A little space for everything else.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="gallery-footnote">
+        Swipe to explore the planner sections.
       </p>
 
     </section>
 
-    <!-- PURCHASE -->
-    <section class="og-main">
 
-      <div class="og-purchase" id="purchase">
+    <!-- WHAT'S INCLUDED -->
+    <section class="details section-pad" id="details">
 
-        <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+      <div class="section-topline">
+        <span class="eyebrow">WHAT'S INCLUDED</span>
+        <span class="section-side-note">THOUGHTFULLY PUT TOGETHER</span>
+      </div>
 
-        <h2>Make room for<br><em>what matters.</em></h2>
+      <div class="details-layout">
 
-        <p>
-          Bring your plans, priorities and everyday moments
-          into one thoughtful digital planning space.
-        </p>
+        <div class="details-heading">
+          <h2>Everything has<br><em>its place.</em></h2>
 
-        <a href="index.html#contact" class="og-button">
-          Purchase the OG Edition <span>↗</span>
-        </a>
+          <p>
+            A complete planning system for the year ahead,
+            designed to bring your different priorities
+            together in one digital space.
+          </p>
 
-        <div class="og-coming-soon">
-          Payhip checkout link to be added
+          <a href="#pricing" class="underlined-link">
+            Explore the full edition ↗
+          </a>
+        </div>
+
+        <div class="details-list">
+          <div><span>01</span><p>2027 yearly overview and goal setting</p></div>
+          <div><span>02</span><p>Monthly planning and reflections</p></div>
+          <div><span>03</span><p>Weekly and daily planning spaces</p></div>
+          <div><span>04</span><p>Wellness and habit tracking</p></div>
+          <div><span>05</span><p>Work, projects and productivity</p></div>
+          <div><span>06</span><p>Home and lifestyle organisation</p></div>
+          <div><span>07</span><p>Budgeting and financial planning</p></div>
+          <div><span>08</span><p>Journaling, notes and reflections</p></div>
         </div>
 
       </div>
+    </section>
+
+
+    <!-- PRICING -->
+    <section class="pricing section-pad" id="pricing">
+
+      <div class="section-topline">
+        <span class="eyebrow">04 / MAKE IT YOURS</span>
+        <span class="section-side-note">YOUR NEXT CHAPTER STARTS HERE</span>
+      </div>
+
+      <div class="pricing-heading">
+        <h2>Choose your way<br><em>into 2027.</em></h2>
+        <p>Start with the full experience or try a smaller beginning.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <article class="price-card price-featured">
+          <div class="price-card-top">
+            <span class="price-label">THE COMPLETE EXPERIENCE</span>
+            <span class="price-index">01 / 02</span>
+          </div>
+
+          <h3>The Full Edition</h3>
+
+          <p class="price-description">
+            Twelve months. Seven planning spaces.
+            One place for all your chapters.
+          </p>
+
+          <div class="price-amount">
+            <span>RM</span>59.90
+          </div>
+
+          <p class="price-sub">Early bird · Regular price RM69.90</p>
+
+          <ul>
+            <li>January – December 2027</li>
+            <li>All seven planning sections</li>
+            <li>Four aesthetic editions to choose from</li>
+            <li>Complete yearly planning experience</li>
+          </ul>
+
+          <a href="#contact" class="button button-light">
+            Choose your edition <span>↗</span>
+          </a>
+        </article>
+
+
+        <article class="price-card price-trial">
+          <div class="price-card-top">
+            <span class="price-label">A SMALLER BEGINNING</span>
+            <span class="price-index">02 / 02</span>
+          </div>
+
+          <h3>The Trial Edition</h3>
+
+          <p class="price-description">
+            A little introduction to the Dear Chapters
+            planning experience.
+          </p>
+
+          <div class="price-amount">
+            <span>RM</span>19.90
+          </div>
+
+          <p class="price-sub">December 2026 – January 2027</p>
+
+          <ul>
+            <li>Explore the planner layout</li>
+            <li>Experience the planning sections</li>
+            <li>Try the digital planning workflow</li>
+            <li>Upgrade to the Full Edition for RM44.90</li>
+          </ul>
+
+          <a href="#contact" class="button button-outline">
+            Start with the trial <span>↗</span>
+          </a>
+
+          <p class="trial-total">Trial + upgrade: RM64.80</p>
+        </article>
+
+      </div>
+
+      <p class="pricing-note">
+        The Full Edition is RM59.90 during early bird pricing.
+        Purchasing it directly is RM4.90 less than buying the Trial Edition and upgrading later.
+      </p>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how section-pad">
+
+      <div class="section-topline">
+        <span class="eyebrow">05 / THE EXPERIENCE</span>
+        <span class="section-side-note">SIMPLE FROM THE VERY START</span>
+      </div>
+
+      <h2>A few simple steps.<br><em>A whole year of possibility.</em></h2>
+
+      <div class="how-grid">
+
+        <article>
+          <span>01</span>
+          <h3>Choose</h3>
+          <p>Find the edition that feels most like you.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Download</h3>
+          <p>Receive your digital planner and instructions after purchase.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Make it yours</h3>
+          <p>Import it into a compatible digital note-taking app and begin.</p>
+        </article>
+
+      </div>
+
+      <p class="compatibility-note">
+        Designed primarily for iPad landscape use. A compatible digital note-taking application is required.
+      </p>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section class="story section-pad" id="story">
+
+      <div class="story-image">
+        <div class="story-image-inner">
+          <span>DC</span>
+          <p>MAKE ROOM<br>FOR EVERY<br>CHAPTER.</p>
+          <small>EST. 2026</small>
+        </div>
+      </div>
+
+      <div class="story-copy">
+        <span class="eyebrow">06 / THE THOUGHT BEHIND IT</span>
+
+        <h2>A little space<br><em>for all of you.</em></h2>
+
+        <p>
+          Life is rarely made up of just one role. We move
+          between ambitions, responsibilities, relationships
+          and the small things that make us who we are.
+        </p>
+
+        <p>
+          Dear Chapters was created to bring those different
+          parts together in one thoughtful planning space —
+          without the pressure to do everything perfectly.
+        </p>
+
+        <p class="story-signoff">
+          With love, <em>Dear Chapters</em>
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq section-pad" id="faq">
+
+      <div class="section-topline">
+        <span class="eyebrow">07 / GOOD TO KNOW</span>
+        <span class="section-side-note">A FEW LITTLE DETAILS</span>
+      </div>
+
+      <div class="faq-layout">
+
+        <div class="faq-heading">
+          <h2>Before you<br><em>begin.</em></h2>
+          <p>A few answers to help you get started.</p>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>Is this a physical planner?<span>＋</span></summary>
+            <p>No. Dear Chapters is a digital product. No physical item will be shipped.</p>
+          </details>
+
+          <details>
+            <summary>Which device can I use?<span>＋</span></summary>
+            <p>The planner is designed primarily for iPad landscape use with a compatible digital note-taking application.</p>
+          </details>
+
+          <details>
+            <summary>Are all four editions different inside?<span>＋</span></summary>
+            <p>All four editions contain the same planning structure and features. The difference is the visual aesthetic and cover design.</p>
+          </details>
+
+          <details>
+            <summary>What is included in the Trial Edition?<span>＋</span></summary>
+            <p>The Trial Edition covers December 2026 and January 2027. It offers a shorter introduction to the Dear Chapters planning experience.</p>
+          </details>
+
+          <details>
+            <summary>Can I upgrade after purchasing the trial?<span>＋</span></summary>
+            <p>Yes. You can upgrade to the Full 2027 Edition for an additional RM44.90.</p>
+          </details>
+
+          <details>
+            <summary>How will I receive my planner?<span>＋</span></summary>
+            <p>Your digital files and download instructions will be provided after purchase through the checkout platform.</p>
+          </details>
+
+          <details>
+            <summary>Can I share or resell my planner?<span>＋</span></summary>
+            <p>Your purchase is for personal use only. The planner and its contents may not be redistributed, resold or shared.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CLOSING -->
+    <section class="closing">
+
+      <span class="eyebrow">THE YEAR IS YOURS TO SHAPE</span>
+
+      <h2>Make room for<br><em>every chapter.</em></h2>
+
+      <a href="#editions" class="button button-light">
+        Discover Dear Chapters <span>↗</span>
+      </a>
+
+      <span class="closing-mark">DEAR CHAPTERS · 2027</span>
 
     </section>
 
   </main>
 
-  <footer class="og-footer">
-    <div class="og-footer-inner">
-      <p>© 2027 DEAR CHAPTERS · MAKE ROOM FOR EVERY CHAPTER</p>
-      <a href="index.html">← Back to the collection</a>
+
+  <!-- CONTACT / FOOTER -->
+  <footer class="site-footer" id="contact">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <a href="#" class="brand">
+          <span class="brand-name">Dear Chapters</span>
+          <span class="brand-subtitle">MAKE ROOM FOR EVERY CHAPTER</span>
+        </a>
+
+        <p>For the many hats you wear every day.</p>
+      </div>
+
+      <div class="footer-links">
+        <span class="eyebrow">EXPLORE</span>
+        <a href="#editions">The collection</a>
+        <a href="#inside">Inside the planner</a>
+        <a href="#story">Our story</a>
+        <a href="#faq">FAQs</a>
+      </div>
+
+      <div class="footer-contact">
+        <span class="eyebrow">SAY HELLO</span>
+        <a href="mailto:hello@dearchapters.com">hello@dearchapters.com</a>
+      </div>
+
     </div>
+
+    <div class="footer-bottom">
+      <span>© 2027 Dear Chapters. All rights reserved.</span>
+      <span>Made with intention.</span>
+      <span>Digital product · Personal use only</span>
+    </div>
+
   </footer>
 
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
 
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener("click", () => {
-        const isOpen = mainNav.classList.toggle("active");
-        menuToggle.setAttribute("aria-expanded", isOpen);
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
