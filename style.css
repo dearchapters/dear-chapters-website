@@ -1,3 +1,4 @@
+
 /* =========================================================
    DEAR CHAPTERS — 2027 DIGITAL PLANNER
    Editorial × Premium Digital Stationery
@@ -616,13 +617,18 @@ section {
   background: #A85F70;
 }
 
-/* Keep the OG background pink when hovering */
+/* Keep the OG cover background deep pink on hover */
 .edition-card:hover .edition-image.edition-og {
   background: #A85F70;
 }
 
 .edition-minimalist {
-  background: #EEEDE9;
+  background: #85866A;
+}
+
+/* Keep the Minimalist background olive green on hover */
+.edition-card:hover .edition-image.edition-minimalist {
+  background: #85866A;
 }
 
 .edition-coquette {
@@ -1990,9 +1996,7 @@ section {
 
 }
 
-
 /* BLACK iPAD MOCKUP */
-
 .ipad-frame {
   position: relative;
   width: 100%;
@@ -2022,9 +2026,7 @@ section {
   background: #000000;
 }
 
-
 /* A CLOSER LOOK — HORIZONTAL CAROUSEL */
-
 .inside-gallery {
   display: flex;
   align-items: flex-start;
@@ -2090,9 +2092,7 @@ section {
   margin-top: 5px;
 }
 
-
 /* TABLET */
-
 @media (min-width: 651px) {
   .inside-item,
   .inside-feature,
@@ -2101,9 +2101,7 @@ section {
   }
 }
 
-
 /* DESKTOP */
-
 @media (min-width: 1000px) {
   .inside-item,
   .inside-feature,
@@ -2112,9 +2110,7 @@ section {
   }
 }
 
-
 /* MOBILE */
-
 @media (max-width: 650px) {
   .ipad-frame {
     padding: 9px;
@@ -2142,9 +2138,7 @@ section {
   }
 }
 
-
 /* MAKE ALL CAROUSEL IMAGES THE SAME SIZE */
-
 .inside-gallery > .inside-item {
   flex: 0 0 38%;
   width: auto;
@@ -2167,7 +2161,6 @@ section {
   }
 }
 
-
 /* DEAR CHAPTERS — EQUAL-SIZED CAROUSEL ITEMS */
 
 .inside-gallery {
@@ -2186,7 +2179,6 @@ section {
 }
 
 /* All seven cards have identical widths */
-
 .inside-gallery > .inside-item {
   flex: 0 0 38% !important;
   width: 38% !important;
@@ -2197,7 +2189,6 @@ section {
 }
 
 /* All seven images have identical proportions */
-
 .inside-gallery > .inside-item img {
   display: block;
   width: 100%;
@@ -2207,7 +2198,6 @@ section {
 }
 
 /* Remove special sizing from Wellness and Notes */
-
 .inside-gallery > .inside-feature,
 .inside-gallery > .inside-notes {
   width: 38% !important;
@@ -2216,7 +2206,6 @@ section {
 }
 
 /* Mobile */
-
 @media (max-width: 650px) {
   .inside-gallery {
     gap: 15px;
@@ -2229,7 +2218,6 @@ section {
     width: 86% !important;
   }
 }
-
 
 /* FINAL FIX — WELLNESS MUST MATCH EVERY OTHER CARD */
 
