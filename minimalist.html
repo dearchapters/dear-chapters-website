@@ -5,66 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Minimalist Edition | Dear Chapters</title>
-  <meta name="description" content="Discover the Minimalist Edition by Dear Chapters. A thoughtfully designed digital planner for every chapter of your life.">
+  <title>Minimalist Edition — Dear Chapters</title>
+  <meta name="description" content="Discover the Dear Chapters Minimalist Edition: a calm olive-green digital planner for every chapter of your life.">
+  <meta name="theme-color" content="#F4F3ED">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
   <style>
     :root {
-      --edition-bg: #F4F3ED;
-      --edition-card: #FBFAF6;
-      --edition-text: #414239;
-      --edition-muted: #929181;
-      --edition-accent: #85866A;
-      --edition-soft: #E8E8DD;
+      --minimalist-bg: #F4F3ED;
+      --minimalist-card: #FBFAF6;
+      --minimalist-text: #414239;
+      --minimalist-muted: #929181;
+      --minimalist-accent: #85866A;
+      --minimalist-line: rgba(65, 66, 57, 0.14);
+      --minimalist-soft: #E8E8DD;
     }
 
     body {
-      background: var(--edition-bg);
-      color: var(--edition-text);
+      background: var(--minimalist-bg);
+      color: var(--minimalist-text);
     }
 
-    .minimalist-page {
-      width: 100%;
-      overflow: hidden;
+    .site-header {
+      background: rgba(244, 243, 237, 0.96);
     }
 
-    /* Navigation */
-
-    .minimalist-nav {
-      padding: 24px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(65,66,57,0.12);
+    .announcement {
+      background: var(--minimalist-text);
     }
 
-    .minimalist-nav a {
-      color: var(--edition-text);
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 1.5px;
+    .announcement span {
+      color: var(--minimalist-accent);
     }
 
-    .minimalist-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 25px !important;
-      letter-spacing: 1px !important;
+    .minimalist-main {
+      max-width: 1440px;
+      margin: auto;
+      padding: 0 7%;
     }
 
-    /* Hero */
+    .minimalist-breadcrumb {
+      padding: 27px 0;
+      color: var(--minimalist-muted);
+      font-size: 9px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .minimalist-breadcrumb a:hover {
+      color: var(--minimalist-accent);
+    }
+
+    /* HERO */
 
     .minimalist-hero {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 0.9fr;
       align-items: center;
-      gap: 70px;
-      padding: 85px 10%;
+      gap: 9%;
+      padding: 45px 0 100px;
     }
 
     .minimalist-cover-wrap {
@@ -72,178 +76,293 @@
       justify-content: center;
       align-items: center;
       padding: 35px;
-      background: var(--edition-accent);
+      background: var(--minimalist-accent);
     }
 
     .minimalist-cover {
-      display: block;
       width: 100%;
       max-width: 510px;
       max-height: 660px;
       object-fit: contain;
+      object-position: center;
     }
 
-    .minimalist-eyebrow {
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--edition-muted);
-      margin-bottom: 20px;
+    .minimalist-cover-caption {
+      margin-top: 15px;
+      color: var(--minimalist-muted);
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
     }
 
-    .minimalist-hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(42px, 5vw, 65px);
+    .minimalist-copy .eyebrow {
+      color: var(--minimalist-accent);
+    }
+
+    .minimalist-copy h1 {
+      margin: 23px 0 10px;
+      color: var(--minimalist-text);
+      font-family: var(--serif);
+      font-size: clamp(55px, 6vw, 82px);
       font-weight: 400;
-      line-height: 1.05;
-      margin: 0 0 25px;
+      line-height: 0.95;
+      letter-spacing: -2px;
     }
 
-    .minimalist-hero p {
-      font-size: 13px;
-      line-height: 2;
-      color: var(--edition-muted);
-      max-width: 430px;
+    .minimalist-subtitle {
+      margin: 0 0 27px;
+      color: var(--minimalist-accent);
+      font-family: var(--serif);
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    .minimalist-description {
+      max-width: 410px;
+      color: var(--minimalist-muted);
+      font-size: 11px;
+      line-height: 2.2;
+    }
+
+    .minimalist-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 30px;
+      color: var(--minimalist-muted);
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    .minimalist-note::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--minimalist-accent);
+    }
+
+    .minimalist-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 34px;
     }
 
     .minimalist-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 16px 30px;
-      background: var(--edition-accent);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      min-height: 48px;
+      padding: 13px 22px;
+      border: 1px solid var(--minimalist-accent);
+      background: var(--minimalist-accent);
       color: white !important;
-      text-decoration: none;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      transition: 0.25s ease;
     }
 
-    /* Interior previews */
+    .minimalist-button:hover {
+      background: #696B52;
+      border-color: #696B52;
+    }
+
+    .minimalist-button-secondary {
+      background: transparent;
+      color: var(--minimalist-accent) !important;
+    }
+
+    .minimalist-button-secondary:hover {
+      background: var(--minimalist-card);
+      color: var(--minimalist-text) !important;
+    }
+
+    .minimalist-divider {
+      height: 1px;
+      background: var(--minimalist-line);
+    }
+
+    /* INTERIOR PREVIEWS */
 
     .minimalist-section {
-      padding: 85px 10%;
+      padding: 90px 0;
     }
 
     .minimalist-section-heading {
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
       margin-bottom: 45px;
     }
 
-    .minimalist-section-heading span {
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--edition-muted);
-    }
-
     .minimalist-section-heading h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 42px;
+      margin: 15px 0 0;
+      color: var(--minimalist-text);
+      font-family: var(--serif);
+      font-size: clamp(39px, 4.5vw, 60px);
       font-weight: 400;
-      margin: 12px 0;
+      line-height: 1;
     }
 
-    .minimalist-intro {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 13px;
+    .minimalist-section-heading h2 em {
+      color: var(--minimalist-accent);
+      font-weight: 400;
+    }
+
+    .minimalist-section-heading p {
+      max-width: 260px;
+      margin: 0;
+      color: var(--minimalist-muted);
+      font-size: 10px;
       line-height: 2;
-      color: var(--edition-muted);
     }
 
     .minimalist-preview-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
-      margin-top: 50px;
+      gap: 45px 28px;
     }
 
-    .minimalist-preview {
-      background: var(--edition-card);
-      padding: 15px;
+    .minimalist-preview-card {
+      min-width: 0;
     }
 
-    .minimalist-preview img {
+    .minimalist-preview-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 220px;
+      padding: 18px;
+      overflow: hidden;
+      background: var(--minimalist-card);
+      border: 1px solid rgba(65, 66, 57, 0.06);
+    }
+
+    .minimalist-preview-image img {
       width: 100%;
-      display: block;
       height: auto;
+      max-height: 480px;
+      object-fit: contain;
+      object-position: center;
     }
 
-    .minimalist-preview-label {
-      padding: 15px 5px 5px;
+    .minimalist-preview-caption {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      padding-top: 17px;
+    }
+
+    .minimalist-preview-number {
+      padding-top: 5px;
+      color: var(--minimalist-accent);
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+
+    .minimalist-preview-caption h3 {
+      margin: 0;
+      color: var(--minimalist-text);
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    .minimalist-preview-caption p {
+      margin: 3px 0 0;
+      color: var(--minimalist-muted);
       font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--edition-text);
     }
 
-    /* Edition information */
+    /* FEATURE STRIP */
 
-    .minimalist-feature {
-      background: var(--edition-soft);
-      padding: 70px 10%;
+    .minimalist-feature-strip {
+      padding: 65px 7%;
+      background: var(--minimalist-soft);
       text-align: center;
     }
 
-    .minimalist-feature h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 38px;
+    .minimalist-feature-strip h2 {
+      margin: 15px 0;
+      color: var(--minimalist-text);
+      font-family: var(--serif);
+      font-size: clamp(35px, 4vw, 52px);
       font-weight: 400;
-      margin: 0 0 20px;
     }
 
-    .minimalist-feature p {
-      max-width: 650px;
+    .minimalist-feature-strip h2 em {
+      color: var(--minimalist-accent);
+    }
+
+    .minimalist-feature-strip p {
+      max-width: 520px;
       margin: auto;
-      font-size: 13px;
+      color: var(--minimalist-muted);
+      font-size: 10px;
+      line-height: 2.1;
+    }
+
+    /* PURCHASE */
+
+    .minimalist-purchase {
+      padding: 95px 0 110px;
+      text-align: center;
+    }
+
+    .minimalist-purchase h2 {
+      margin: 17px 0;
+      color: var(--minimalist-text);
+      font-family: var(--serif);
+      font-size: clamp(42px, 5vw, 65px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .minimalist-purchase h2 em {
+      color: var(--minimalist-accent);
+    }
+
+    .minimalist-purchase p {
+      max-width: 440px;
+      margin: 0 auto 25px;
+      color: var(--minimalist-muted);
+      font-size: 10px;
       line-height: 2;
-      color: var(--edition-muted);
     }
 
-    /* Details */
-
-    .minimalist-details {
-      max-width: 750px;
-      margin: auto;
-    }
-
-    .minimalist-detail-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(65,66,57,0.15);
-      font-size: 12px;
-    }
-
-    .minimalist-detail-row span:last-child {
-      color: var(--edition-muted);
-      text-align: right;
-    }
-
-    /* Footer */
+    /* FOOTER */
 
     .minimalist-footer {
-      padding: 42px 7% 30px;
+      padding: 38px 7%;
+      border-top: 1px solid var(--minimalist-line);
       text-align: center;
-      border-top: 1px solid rgba(65,66,57,0.12);
-      color: var(--edition-muted);
+    }
+
+    .minimalist-footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 1440px;
+      margin: auto;
     }
 
     .minimalist-footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 25px;
-      letter-spacing: 1px;
-      color: var(--edition-text);
-      margin-bottom: 7px;
+      color: var(--minimalist-text) !important;
+      font-family: var(--serif);
+      font-size: 24px !important;
+      letter-spacing: 2px;
+      font-weight: 500;
     }
 
     .minimalist-footer-tagline {
+      margin: 0;
+      color: var(--minimalist-muted);
       font-size: 9px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
+      letter-spacing: .7px;
     }
 
     .minimalist-socials {
@@ -251,87 +370,128 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 22px;
-      margin: 0 auto 18px;
+      gap: 27px;
+      margin: 18px 0 8px;
     }
 
     .minimalist-social-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: var(--edition-text);
-      text-decoration: none;
-      font-size: 10px;
-      letter-spacing: 1px;
-      transition: opacity 0.2s ease;
+      gap: 7px;
+      color: var(--minimalist-accent) !important;
+      font-size: 9px !important;
+      letter-spacing: .7px;
+      transition: color .25s ease;
     }
 
-    .minimalist-social-link:hover {
-      opacity: 0.65;
+    .minimalist-social-link:hover,
+    .minimalist-footer-back:hover {
+      color: var(--minimalist-text) !important;
     }
 
     .minimalist-social-link svg {
-      width: 17px;
-      height: 17px;
       display: block;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.6;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+      width: 18px;
+      height: 18px;
     }
 
     .minimalist-footer-email {
-      display: inline-block;
-      color: var(--edition-muted);
-      text-decoration: none;
-      font-size: 10px;
-      letter-spacing: 0.5px;
-      margin-bottom: 22px;
+      color: var(--minimalist-accent) !important;
+      font-size: 10px !important;
+      letter-spacing: .3px;
     }
 
     .minimalist-footer-copyright {
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      margin: 12px 0 0;
+      color: var(--minimalist-muted);
+      font-size: 8px;
+      letter-spacing: .8px;
     }
 
-    /* Mobile */
+    .minimalist-footer-back {
+      margin-top: 8px;
+      color: var(--minimalist-accent) !important;
+      font-size: 9px !important;
+    }
 
-    @media (max-width: 768px) {
+    @media (max-width: 430px) {
+      .minimalist-socials {
+        gap: 17px;
+      }
+
+      .minimalist-social-link {
+        font-size: 8px !important;
+      }
+    }
+
+    /* TABLET */
+
+    @media (max-width: 800px) {
       .minimalist-hero {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 50px 7%;
+        gap: 45px;
+        padding: 25px 0 70px;
       }
 
       .minimalist-cover-wrap {
         padding: 20px;
       }
 
+      .minimalist-cover {
+        max-height: 530px;
+      }
+
+      .minimalist-copy {
+        text-align: center;
+      }
+
+      .minimalist-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .minimalist-note,
+      .minimalist-actions {
+        justify-content: center;
+      }
+
       .minimalist-section {
-        padding: 60px 7%;
+        padding: 65px 0;
+      }
+
+      .minimalist-section-heading {
+        display: block;
+      }
+
+      .minimalist-section-heading p {
+        margin-top: 20px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 560px) {
+      .minimalist-main {
+        padding: 0 5%;
       }
 
       .minimalist-preview-grid {
         grid-template-columns: 1fr;
+        gap: 35px;
       }
 
-      .minimalist-nav {
-        padding: 20px 6%;
+      .minimalist-preview-image {
+        min-height: 160px;
+        padding: 12px;
       }
 
-      .minimalist-nav a {
-        font-size: 9px;
-        letter-spacing: 1px;
+      .minimalist-preview-image img {
+        max-height: 380px;
       }
 
-      .minimalist-footer {
-        padding: 35px 6% 25px;
-      }
-
-      .minimalist-socials {
-        gap: 16px;
+      .minimalist-footer-inner {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
@@ -339,256 +499,387 @@
 
 <body>
 
-<div class="minimalist-page">
+  <!-- ANNOUNCEMENT -->
 
-  <!-- NAVIGATION -->
-
-  <nav class="minimalist-nav">
-    <a href="index.html">← BACK TO COLLECTION</a>
-    <a href="index.html" class="minimalist-brand">Dear Chapters</a>
-  </nav>
+  <div class="announcement">
+    THE 2027 COLLECTION <span>✳</span> MAKE ROOM FOR EVERY CHAPTER
+  </div>
 
 
-  <!-- HERO SECTION -->
+  <!-- HEADER -->
 
-  <section class="minimalist-hero">
+  <header class="site-header">
+    <div class="header-inner">
 
-    <div class="minimalist-cover-wrap">
-      <img
-        src="assets/products/minimalist-cover.jpg"
-        alt="Dear Chapters Minimalist Edition digital planner cover"
-        class="minimalist-cover"
-      >
-    </div>
-
-    <div class="minimalist-hero-content">
-
-      <div class="minimalist-eyebrow">
-        THE MINIMALIST COLLECTION
-      </div>
-
-      <h1>Less noise.<br>More clarity.</h1>
-
-      <p>
-        A calm and intentional space to organise your days,
-        manage your responsibilities and make room for what matters.
-        Designed for women who carry many roles, yet still deserve
-        a little space for themselves.
-      </p>
-
-      <a href="#details" class="minimalist-button">
-        EXPLORE THE PLANNER
+      <a href="index.html" class="brand">
+        <span class="brand-name">Dear Chapters</span>
+        <span class="brand-subtitle">MAKE ROOM FOR EVERY CHAPTER</span>
       </a>
 
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#editions">The editions</a>
+        <a href="#previews">Inside the planner</a>
+        <a href="index.html#story">Our story</a>
+        <a href="index.html#faq">FAQs</a>
+      </nav>
+
+      <a href="#purchase" class="nav-cta">
+        Explore Minimalist Edition <span>↗</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="minimalist-main">
+
+      <!-- BREADCRUMB -->
+
+      <div class="minimalist-breadcrumb">
+        <a href="index.html">Home</a>
+        &nbsp; / &nbsp;
+        <a href="index.html#editions">The Collection</a>
+        &nbsp; / &nbsp;
+        Minimalist Edition
+      </div>
+
+
+      <!-- MINIMALIST HERO -->
+
+      <section class="minimalist-hero">
+
+        <div>
+          <div class="minimalist-cover-wrap">
+            <img
+              class="minimalist-cover"
+              src="assets/products/minimalist-cover.jpg"
+              alt="Dear Chapters Minimalist Edition olive-green planner cover"
+            >
+          </div>
+
+          <p class="minimalist-cover-caption">
+            A calmer way to organise your everyday.
+          </p>
+        </div>
+
+
+        <div class="minimalist-copy">
+
+          <span class="eyebrow">
+            02 / THE MINIMALIST EDITION
+          </span>
+
+          <h1>Minimalist<br>Edition.</h1>
+
+          <p class="minimalist-subtitle">
+            Less noise. More clarity.
+          </p>
+
+          <p class="minimalist-description">
+            A calm and intentional planning space designed
+            to bring every part of your life together.
+            From your yearly intentions to everyday routines,
+            make room for what matters without the noise.
+          </p>
+
+          <div class="minimalist-note">
+            MUTED OLIVE · A CALM AND INTENTIONAL PALETTE
+          </div>
+
+          <div class="minimalist-actions">
+
+            <a href="#previews" class="minimalist-button">
+              Explore the pages <span>↓</span>
+            </a>
+
+            <a href="index.html#editions" class="minimalist-button minimalist-button-secondary">
+              All editions <span>↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <div class="minimalist-divider"></div>
+
+
+      <!-- INTERIOR PREVIEWS -->
+
+      <section class="minimalist-section" id="previews">
+
+        <div class="section-topline">
+          <span class="eyebrow">02 / INSIDE THE MINIMALIST EDITION</span>
+          <span class="section-side-note">A CLOSER LOOK AT THE PAGES</span>
+        </div>
+
+        <div class="minimalist-section-heading">
+
+          <div>
+            <h2>A little room<br>for <em>everything.</em></h2>
+          </div>
+
+          <p>
+            Explore a selection of the pages
+            that make up the Minimalist planning experience.
+          </p>
+
+        </div>
+
+
+        <div class="minimalist-preview-grid">
+
+          <!-- START -->
+
+          <article class="minimalist-preview-card">
+
+            <div class="minimalist-preview-image">
+              <img
+                src="assets/products/start-min.jpg"
+                alt="Minimalist Edition Start planner pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="minimalist-preview-caption">
+              <span class="minimalist-preview-number">01</span>
+
+              <div>
+                <h3>Start</h3>
+                <p>A place to begin with intention.</p>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- PRAYER -->
+
+          <article class="minimalist-preview-card">
+
+            <div class="minimalist-preview-image">
+              <img
+                src="assets/products/prayer-min.jpg"
+                alt="Minimalist Edition Prayer planner pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="minimalist-preview-caption">
+              <span class="minimalist-preview-number">02</span>
+
+              <div>
+                <h3>Prayer</h3>
+                <p>Make space for spiritual reflection.</p>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- MEALS -->
+
+          <article class="minimalist-preview-card">
+
+            <div class="minimalist-preview-image">
+              <img
+                src="assets/products/meals-min.jpg"
+                alt="Minimalist Edition Meals planning pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="minimalist-preview-caption">
+              <span class="minimalist-preview-number">03</span>
+
+              <div>
+                <h3>Meals</h3>
+                <p>Bring a little more intention to everyday meals.</p>
+              </div>
+            </div>
+
+          </article>
+
+
+          <!-- HEALTH -->
+
+          <article class="minimalist-preview-card">
+
+            <div class="minimalist-preview-image">
+              <img
+                src="assets/products/health-min.jpg"
+                alt="Minimalist Edition Health planning pages"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="minimalist-preview-caption">
+              <span class="minimalist-preview-number">04</span>
+
+              <div>
+                <h3>Health</h3>
+                <p>A thoughtful space for your wellbeing.</p>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
     </div>
 
-  </section>
 
+    <!-- SAME CONTENT, DIFFERENT AESTHETICS -->
 
-  <!-- INTERIOR PREVIEW SECTION -->
+    <section class="minimalist-feature-strip">
 
-  <section class="minimalist-section">
+      <span class="eyebrow">ONE PLANNING SYSTEM</span>
 
-    <div class="minimalist-section-heading">
+      <h2>Made for every<br><em>chapter of you.</em></h2>
 
-      <span>INSIDE THE PLANNER</span>
-
-      <h2>A closer look</h2>
-
-      <p class="minimalist-intro">
-        Thoughtfully organised pages to support different parts
-        of your life, from everyday routines to personal wellbeing.
+      <p>
+        The Minimalist Edition shares the same planner content
+        and planning sections as our Signature, Coquette
+        and Luxury editions. Choose the aesthetic that
+        feels most like you.
       </p>
 
-    </div>
+    </section>
 
-    <div class="minimalist-preview-grid">
 
-      <div class="minimalist-preview">
-        <img
-          src="assets/products/start-min.jpg"
-          alt="Minimalist Start section preview"
+    <!-- PURCHASE -->
+
+    <section class="minimalist-main">
+
+      <div class="minimalist-purchase" id="purchase">
+
+        <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+
+        <h2>Make room for<br><em>what matters.</em></h2>
+
+        <p>
+          Bring your plans, priorities and everyday moments
+          into one thoughtful digital planning space.
+        </p>
+
+        <a
+          href="https://payhip.com/b/fzme7"
+          class="minimalist-button"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-        <div class="minimalist-preview-label">START</div>
+          Purchase the Full Edition <span>↗</span>
+        </a>
+
       </div>
 
-      <div class="minimalist-preview">
-        <img
-          src="assets/products/prayer-min.jpg"
-          alt="Minimalist Prayer section preview"
-        >
-        <div class="minimalist-preview-label">PRAYER</div>
-      </div>
+    </section>
 
-      <div class="minimalist-preview">
-        <img
-          src="assets/products/meals-min.jpg"
-          alt="Minimalist Meals section preview"
-        >
-        <div class="minimalist-preview-label">MEALS</div>
-      </div>
-
-      <div class="minimalist-preview">
-        <img
-          src="assets/products/health-min.jpg"
-          alt="Minimalist Health section preview"
-        >
-        <div class="minimalist-preview-label">HEALTH</div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EDITION FEATURES -->
-
-  <section class="minimalist-feature">
-
-    <h2>One planner. Every chapter.</h2>
-
-    <p>
-      Every Dear Chapters edition contains the same thoughtfully
-      designed planning system and features. Choose the aesthetic
-      that feels most like you.
-    </p>
-
-  </section>
-
-
-  <!-- PRODUCT DETAILS -->
-
-  <section class="minimalist-section" id="details">
-
-    <div class="minimalist-section-heading">
-
-      <span>THE DETAILS</span>
-
-      <h2>Made for everyday life</h2>
-
-    </div>
-
-    <div class="minimalist-details">
-
-      <div class="minimalist-detail-row">
-        <span>FORMAT</span>
-        <span>Digital planner</span>
-      </div>
-
-      <div class="minimalist-detail-row">
-        <span>DESIGNED FOR</span>
-        <span>iPad & digital note-taking apps</span>
-      </div>
-
-      <div class="minimalist-detail-row">
-        <span>LAYOUT</span>
-        <span>Landscape</span>
-      </div>
-
-      <div class="minimalist-detail-row">
-        <span>CONTENT</span>
-        <span>All-in-one life planning system</span>
-      </div>
-
-      <div class="minimalist-detail-row">
-        <span>EDITION</span>
-        <span>Minimalist</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CLOSING SECTION -->
-
-  <section class="minimalist-feature">
-
-    <h2>Make room for every chapter.</h2>
-
-    <p>
-      Your life has many moving parts. Give each one a place.
-    </p>
-
-    <a href="#details" class="minimalist-button">
-      DISCOVER THE DETAILS
-    </a>
-
-  </section>
+  </main>
 
 
   <!-- FOOTER -->
 
   <footer class="minimalist-footer">
 
-    <div class="minimalist-footer-brand">Dear Chapters</div>
+    <div class="minimalist-footer-inner">
 
-    <div class="minimalist-footer-tagline">
-      Make room for every chapter.
-    </div>
+      <a href="index.html" class="minimalist-footer-brand">DEAR CHAPTERS</a>
 
-    <div class="minimalist-socials">
+      <p class="minimalist-footer-tagline">Make room for every chapter.</p>
 
-      <!-- Threads -->
+      <div class="minimalist-socials">
 
-      <a
-        href="https://www.threads.net/@dearchapters.co"
-        class="minimalist-social-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Dear Chapters on Threads"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M18.2 8.7c-.7-3.1-2.8-4.8-6.1-4.8-4.2 0-6.7 3-6.7 8.1 0 5.3 2.5 8.1 6.8 8.1 3.3 0 5.5-1.8 5.5-4.6 0-2.5-1.8-4-4.8-4-2.1 0-3.5.9-3.5 2.4 0 1.2.9 2 2.2 2 1.7 0 2.8-1.3 2.8-3.3 0-2.2-1.2-3.7-3.2-3.7"/>
-          <path d="M13.9 11.1c2.1.1 4.2.7 5.8 1.8"/>
-        </svg>
-        <span>Threads</span>
+        <!-- THREADS -->
+
+        <a
+          href="https://www.threads.net/@dearchapters.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Dear Chapters on Threads"
+          class="minimalist-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/>
+          </svg>
+          <span>Threads</span>
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/dearchapters.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Dear Chapters on Instagram"
+          class="minimalist-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+          href="mailto:dearchapters.co@gmail.com"
+          aria-label="Email Dear Chapters"
+          class="minimalist-social-link"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Email</span>
+        </a>
+
+      </div>
+
+      <a href="mailto:dearchapters.co@gmail.com" class="minimalist-footer-email">
+        dearchapters.co@gmail.com
       </a>
 
-      <!-- Instagram -->
+      <p class="minimalist-footer-copyright">
+        © 2026 Dear Chapters. All rights reserved.
+      </p>
 
-      <a
-        href="https://www.instagram.com/dearchapters.co/"
-        class="minimalist-social-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Dear Chapters on Instagram"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17.6" cy="6.7" r="0.8" fill="currentColor" stroke="none"/>
-        </svg>
-        <span>Instagram</span>
+      <a href="index.html" class="minimalist-footer-back">
+        ← Back to the collection
       </a>
 
-      <!-- Email -->
-
-      <a
-        href="mailto:dearchapters.co@gmail.com"
-        class="minimalist-social-link"
-        aria-label="Email Dear Chapters"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
-          <path d="m4 7 8 6 8-6"/>
-        </svg>
-        <span>Email</span>
-      </a>
-
-    </div>
-
-    <a class="minimalist-footer-email" href="mailto:dearchapters.co@gmail.com">
-      dearchapters.co@gmail.com
-    </a>
-
-    <div class="minimalist-footer-copyright">
-      © 2026 Dear Chapters. All rights reserved.
     </div>
 
   </footer>
 
-</div>
+
+  <!-- MOBILE NAVIGATION -->
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
+  </script>
 
 </body>
 </html>
