@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,17 @@
   <title>Signature Edition — Dear Chapters</title>
   <meta name="description" content="Discover the Dear Chapters Signature Edition: a blush and beige digital planner for every chapter of your life.">
   <meta name="theme-color" content="#F5F0E9">
+  <link rel="canonical" href="https://dearchapters.github.io/dear-chapters-website/og.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Signature Edition — Dear Chapters">
+  <meta property="og:description" content="Discover the Dear Chapters Signature Edition: a blush and beige digital planner for every chapter of your life.">
+  <meta property="og:url" content="https://dearchapters.github.io/dear-chapters-website/og.html">
+  <meta property="og:site_name" content="Dear Chapters">
+  <meta property="og:image" content="https://dearchapters.github.io/dear-chapters-website/assets/products/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,497 +25,60 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- Only this colour set is specific to the Signature Edition. All layout lives in style.css. -->
   <style>
-    :root {
-      --og-bg: #F5F0E9;
-      --og-card: #FFFCFA;
-      --og-text: #4A3F44;
-      --og-muted: #9A8A8E;
-      --og-accent: #BF8587;
-      --og-line: rgba(74, 63, 68, 0.14);
-    }
-
-    body {
-      background: var(--og-bg);
-      color: var(--og-text);
-    }
-
-    .site-header {
-      background: rgba(251, 245, 240, 0.96);
-    }
-
-    .announcement {
-      background: var(--og-text);
-    }
-
-    .announcement span {
-      color: #DB9EAD;
-    }
-
-    .og-main {
-      max-width: 1440px;
-      margin: auto;
-      padding: 0 7%;
-    }
-
-    .og-breadcrumb {
-      padding: 27px 0;
-      color: var(--og-muted);
-      font-size: 9px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
-
-    .og-breadcrumb a:hover {
-      color: var(--og-accent);
-    }
-
-    /* HERO */
-
-    .og-hero {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      align-items: center;
-      gap: 9%;
-      padding: 45px 0 100px;
-    }
-
-    .og-cover-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 35px;
-      background: #A85F70;
-    }
-
-    .og-cover {
-      width: 100%;
-      max-width: 510px;
-      max-height: 660px;
-      object-fit: contain;
-      object-position: center;
-    }
-
-    .og-cover-caption {
-      margin-top: 15px;
-      color: var(--og-muted);
-      font-family: var(--serif);
-      font-size: 14px;
-      font-style: italic;
-      text-align: center;
-    }
-
-    .og-copy .eyebrow {
-      color: #8F7474;
-    }
-
-    .og-copy h1 {
-      margin: 23px 0 10px;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(55px, 6vw, 82px);
-      font-weight: 400;
-      line-height: 0.95;
-      letter-spacing: -2px;
-    }
-
-    .og-subtitle {
-      margin: 0 0 27px;
-      color: var(--og-accent);
-      font-family: var(--serif);
-      font-size: 25px;
-      font-style: italic;
-    }
-
-    .og-description {
-      max-width: 410px;
-      color: var(--og-muted);
-      font-size: 11px;
-      line-height: 2.2;
-    }
-
-    .og-note {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 30px;
-      color: var(--og-muted);
-      font-size: 9px;
-      letter-spacing: 1px;
-    }
-
-    .og-note::before {
-      content: "";
-      width: 28px;
-      height: 1px;
-      background: var(--og-accent);
-    }
-
-    .og-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 34px;
-    }
-
-    .og-button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      min-height: 48px;
-      padding: 13px 22px;
-      border: 1px solid var(--og-accent);
-      background: var(--og-accent);
-      color: white;
-      font-size: 9px;
-      letter-spacing: 0.5px;
-      transition: 0.25s ease;
-    }
-
-    .og-button:hover {
-      background: #8F7474;
-      border-color: #8F7474;
-    }
-
-    .og-button-secondary {
-      background: transparent;
-      color: #8F7474;
-    }
-
-    .og-button-secondary:hover {
-      background: var(--og-card);
-      color: var(--og-text);
-    }
-
-    .og-divider {
-      height: 1px;
-      background: var(--og-line);
-    }
-
-    /* INTERIOR PREVIEWS */
-
-    .og-section {
-      padding: 90px 0;
-    }
-
-    .og-section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 30px;
-      margin-bottom: 45px;
-    }
-
-    .og-section-heading h2 {
-      margin: 15px 0 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(39px, 4.5vw, 60px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .og-section-heading h2 em {
-      color: var(--og-accent);
-      font-weight: 400;
-    }
-
-    .og-section-heading p {
-      max-width: 260px;
-      margin: 0;
-      color: var(--og-muted);
-      font-size: 10px;
-      line-height: 2;
-    }
-
-    .og-preview-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 45px 28px;
-    }
-
-    .og-preview-card {
-      min-width: 0;
-    }
-
-    .og-preview-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 220px;
-      padding: 18px;
-      overflow: hidden;
-      background: var(--og-card);
-      border: 1px solid rgba(74, 63, 68, 0.06);
-    }
-
-    .og-preview-image img {
-      width: 100%;
-      height: auto;
-      max-height: 480px;
-      object-fit: contain;
-      object-position: center;
-    }
-
-    .og-preview-caption {
-      display: flex;
-      align-items: flex-start;
-      gap: 17px;
-      padding-top: 17px;
-    }
-
-    .og-preview-number {
-      padding-top: 5px;
-      color: var(--og-accent);
-      font-family: var(--serif);
-      font-size: 18px;
-    }
-
-    .og-preview-caption h3 {
-      margin: 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 400;
-    }
-
-    .og-preview-caption p {
-      margin: 3px 0 0;
-      color: var(--og-muted);
-      font-size: 10px;
-    }
-
-    /* FEATURE STRIP */
-
-    .og-feature-strip {
-      padding: 65px 7%;
-      background: #F6E9E2;
-      text-align: center;
-    }
-
-    .og-feature-strip h2 {
-      margin: 15px 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(35px, 4vw, 52px);
-      font-weight: 400;
-    }
-
-    .og-feature-strip h2 em {
-      color: var(--og-accent);
-    }
-
-    .og-feature-strip p {
-      max-width: 520px;
-      margin: auto;
-      color: #85777A;
-      font-size: 10px;
-      line-height: 2.1;
-    }
-
-    /* PURCHASE */
-
-    .og-purchase {
-      padding: 95px 0 110px;
-      text-align: center;
-    }
-
-    .og-purchase h2 {
-      margin: 17px 0;
-      color: var(--og-text);
-      font-family: var(--serif);
-      font-size: clamp(42px, 5vw, 65px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .og-purchase h2 em {
-      color: var(--og-accent);
-    }
-
-    .og-purchase p {
-      max-width: 440px;
-      margin: 0 auto 25px;
-      color: var(--og-muted);
-      font-size: 10px;
-      line-height: 2;
-    }
-
-    /* FOOTER */
-
-    .og-footer {
-      padding: 38px 7%;
-      border-top: 1px solid var(--og-line);
-      text-align: center;
-    }
-
-    .og-footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      max-width: 1440px;
-      margin: auto;
-    }
-
-    .og-footer-brand {
-      color: var(--og-text) !important;
-      font-family: var(--serif);
-      font-size: 24px !important;
-      letter-spacing: 2px;
-      font-weight: 500;
-    }
-
-    .og-footer-tagline {
-      margin: 0;
-      color: var(--og-muted);
-      font-size: 9px;
-      letter-spacing: .7px;
-    }
-
-    .og-socials {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 27px;
-      margin: 18px 0 8px;
-    }
-
-    .og-social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: #8F7474 !important;
-      font-size: 9px !important;
-      letter-spacing: .7px;
-      transition: color .25s ease;
-    }
-
-    .og-social-link:hover,
-    .og-footer-back:hover {
-      color: var(--og-text) !important;
-    }
-
-    .og-social-link svg {
-      display: block;
-      width: 18px;
-      height: 18px;
-    }
-
-    .og-footer-email {
-      color: #8F7474 !important;
-      font-size: 10px !important;
-      letter-spacing: .3px;
-    }
-
-    .og-footer-copyright {
-      margin: 12px 0 0;
-      color: var(--og-muted);
-      font-size: 8px;
-      letter-spacing: .8px;
-    }
-
-    .og-footer-back {
-      margin-top: 8px;
-      color: #8F7474 !important;
-      font-size: 9px !important;
-    }
-
-    @media (max-width: 430px) {
-      .og-socials {
-        gap: 17px;
-      }
-
-      .og-social-link {
-        font-size: 8px !important;
-      }
-    }
-
-    /* TABLET */
-
-    @media (max-width: 800px) {
-      .og-hero {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        padding: 25px 0 70px;
-      }
-
-      .og-cover-wrap {
-        padding: 20px;
-      }
-
-      .og-cover {
-        max-height: 530px;
-      }
-
-      .og-copy {
-        text-align: center;
-      }
-
-      .og-description {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .og-note,
-      .og-actions {
-        justify-content: center;
-      }
-
-      .og-section {
-        padding: 65px 0;
-      }
-
-      .og-section-heading {
-        display: block;
-      }
-
-      .og-section-heading p {
-        margin-top: 20px;
-      }
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 560px) {
-      .og-main {
-        padding: 0 5%;
-      }
-
-      .og-preview-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .og-preview-image {
-        min-height: 160px;
-        padding: 12px;
-      }
-
-      .og-preview-image img {
-        max-height: 380px;
-      }
-
-      .og-footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
+    body.theme-og {
+      --t-bg: #F5F0E9;
+      --t-card: #FFFCFA;
+      --t-text: #4A3F44;
+      --t-muted: #75686B;
+      --t-btn: #96696A;
+      --t-hover: #7E5C60;
+      --t-em: #A97678;
+      --t-eyebrow: #7D6666;
+      --t-link: #7D6666;
+      --t-line: rgba(74,63,68,0.16);
+      --t-soft: #F6E9E2;
+      --t-cover: #A85F70;
+      --t-cover-shadow: none;
+      --t-ann: #4A3F44;
+      --t-ann-span: #DB9EAD;
+      --t-header: rgba(251,245,240,0.96);
     }
   </style>
+
+  <script>document.documentElement.className += " js";</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Dear Chapters Signature Edition: 2027 Digital Planner",
+  "description": "Discover the Dear Chapters Signature Edition: a blush and beige digital planner for every chapter of your life.",
+  "image": "https://dearchapters.github.io/dear-chapters-website/assets/products/og-cover.jpg",
+  "brand": {
+    "@type": "Brand",
+    "name": "Dear Chapters"
+  },
+  "url": "https://dearchapters.github.io/dear-chapters-website/og.html",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://payhip.com/b/fzme7",
+    "priceCurrency": "MYR",
+    "price": "59.90",
+    "availability": "https://schema.org/InStock"
+  }
+}
+  </script>
 </head>
 
-<body>
+<body class="edition theme-og">
 
-  <!-- ANNOUNCEMENT -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="announcement">
     THE 2027 COLLECTION <span>✳</span> MAKE ROOM FOR EVERY CHAPTER
   </div>
-
-
-  <!-- HEADER -->
 
   <header class="site-header">
     <div class="header-inner">
@@ -533,14 +106,11 @@
     </div>
   </header>
 
+  <main id="main">
 
-  <main>
+    <div class="ed-main">
 
-    <div class="og-main">
-
-      <!-- BREADCRUMB -->
-
-      <div class="og-breadcrumb">
+      <div class="ed-breadcrumb">
         <a href="index.html">Home</a>
         &nbsp; / &nbsp;
         <a href="index.html#editions">The Collection</a>
@@ -548,187 +118,96 @@
         Signature Edition
       </div>
 
-
-      <!-- SIGNATURE HERO -->
-
-      <section class="og-hero">
+      <section class="ed-hero">
 
         <div>
-          <div class="og-cover-wrap">
-            <img
-              class="og-cover"
-              src="assets/products/og-cover.jpg"
-              alt="Dear Chapters Signature Edition blush and beige planner cover"
-            >
+          <div class="ed-cover-wrap">
+            <img class="ed-cover" src="assets/products/og-cover.jpg" alt="Dear Chapters Signature Edition blush and beige planner cover" fetchpriority="high">
           </div>
-
-          <p class="og-cover-caption">
-            The original Dear Chapters aesthetic.
-          </p>
+          <p class="ed-cover-caption">The original Dear Chapters aesthetic.</p>
         </div>
 
-
-        <div class="og-copy">
-
-          <span class="eyebrow">
-            01 / THE SIGNATURE EDITION
-          </span>
-
+        <div class="ed-copy">
+          <span class="eyebrow">01 / THE SIGNATURE EDITION</span>
           <h1>Signature<br>Edition.</h1>
+          <p class="ed-subtitle">Original. Thoughtful. Timeless.</p>
+          <p class="ed-description">A soft blush-and-beige planning space designed to bring every part of your life together. From your yearly intentions to the little details of everyday living, make room for every chapter.</p>
+          <div class="ed-note">BLUSH &amp; BEIGE · THE ORIGINAL PALETTE</div>
 
-          <p class="og-subtitle">
-            Original. Thoughtful. Timeless.
-          </p>
-
-          <p class="og-description">
-            A soft blush-and-beige planning space designed
-            to bring every part of your life together.
-            From your yearly intentions to the little details
-            of everyday living, make room for every chapter.
-          </p>
-
-          <div class="og-note">
-            BLUSH & BEIGE · THE ORIGINAL PALETTE
+          <div class="ed-actions">
+            <a href="#previews" class="ed-button">Explore the pages <span>↓</span></a>
+            <a href="index.html#editions" class="ed-button ed-button-secondary">All editions <span>↗</span></a>
           </div>
-
-          <div class="og-actions">
-
-            <a href="#previews" class="og-button">
-              Explore the pages <span>↓</span>
-            </a>
-
-            <a href="index.html#editions" class="og-button og-button-secondary">
-              All editions <span>↗</span>
-            </a>
-
-          </div>
-
         </div>
 
       </section>
 
+      <div class="ed-divider"></div>
 
-      <div class="og-divider"></div>
-
-
-      <!-- INTERIOR PREVIEWS -->
-
-      <section class="og-section" id="previews">
+      <section class="ed-section" id="previews">
 
         <div class="section-topline">
           <span class="eyebrow">02 / INSIDE THE SIGNATURE EDITION</span>
           <span class="section-side-note">A CLOSER LOOK AT THE PAGES</span>
         </div>
 
-        <div class="og-section-heading">
-
-          <div>
-            <h2>A little room<br>for <em>everything.</em></h2>
-          </div>
-
-          <p>
-            Explore a selection of the pages
-            that make up the Signature planning experience.
-          </p>
-
+        <div class="ed-heading" style="margin-top:45px">
+          <div><h2>A little room<br>for <em>everything.</em></h2></div>
+          <p>Explore a selection of the pages that make up the Signature planning experience.</p>
         </div>
 
+        <div class="ed-grid">
 
-        <div class="og-preview-grid">
-
-          <!-- START -->
-
-          <article class="og-preview-card">
-
-            <div class="og-preview-image">
-              <img
-                src="assets/products/start-preview.jpg"
-                alt="Signature Edition Start planner pages"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/start-preview.jpg" alt="Signature Edition Start planner pages" loading="lazy" decoding="async">
             </div>
-
-            <div class="og-preview-caption">
-              <span class="og-preview-number">01</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">01</span>
               <div>
                 <h3>Start</h3>
                 <p>A place to begin with intention.</p>
               </div>
             </div>
-
           </article>
 
-
-          <!-- YEAR -->
-
-          <article class="og-preview-card">
-
-            <div class="og-preview-image">
-              <img
-                src="assets/products/year-preview.jpg"
-                alt="Signature Edition yearly planning pages"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/year-preview.jpg" alt="Signature Edition yearly planning pages" loading="lazy" decoding="async">
             </div>
-
-            <div class="og-preview-caption">
-              <span class="og-preview-number">02</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">02</span>
               <div>
                 <h3>Year</h3>
                 <p>See the bigger picture.</p>
               </div>
             </div>
-
           </article>
 
-
-          <!-- PLANNING CYCLES -->
-
-          <article class="og-preview-card">
-
-            <div class="og-preview-image">
-              <img
-                src="assets/products/cycle-preview.jpg"
-                alt="Signature Edition monthly and weekly planning pages"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/cycle-preview.jpg" alt="Signature Edition monthly and weekly planning pages" loading="lazy" decoding="async">
             </div>
-
-            <div class="og-preview-caption">
-              <span class="og-preview-number">03</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">03</span>
               <div>
                 <h3>Planning Cycles</h3>
                 <p>Bring your days and weeks into focus.</p>
               </div>
             </div>
-
           </article>
 
-
-          <!-- MONEY -->
-
-          <article class="og-preview-card">
-
-            <div class="og-preview-image">
-              <img
-                src="assets/products/budget-preview.jpg"
-                alt="Signature Edition money and budget planning pages"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/budget-preview.jpg" alt="Signature Edition money and budget planning pages" loading="lazy" decoding="async">
             </div>
-
-            <div class="og-preview-caption">
-              <span class="og-preview-number">04</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">04</span>
               <div>
                 <h3>Money</h3>
                 <p>A little more clarity for your finances.</p>
               </div>
             </div>
-
           </article>
 
         </div>
@@ -737,143 +216,102 @@
 
     </div>
 
-
-    <!-- SAME CONTENT, DIFFERENT AESTHETICS -->
-
-    <section class="og-feature-strip">
-
+    <section class="ed-strip">
       <span class="eyebrow">ONE PLANNING SYSTEM</span>
-
       <h2>Made for every<br><em>chapter of you.</em></h2>
-
-      <p>
-        The Signature Edition shares the same planner content
-        and planning sections as our Minimalist, Coquette
-        and Luxury editions. Choose the aesthetic that
-        feels most like you.
-      </p>
-
+      <p>The Signature Edition shares the same planner content and planning sections as our Minimalist, Coquette and Luxury editions. Choose the aesthetic that feels most like you.</p>
     </section>
 
+    <section class="ed-main">
 
-    <!-- PURCHASE -->
-
-    <section class="og-main">
-
-      <div class="og-purchase" id="purchase">
+      <div class="ed-purchase" id="purchase">
 
         <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
 
         <h2>Make room for<br><em>what matters.</em></h2>
 
-        <p>
-          Bring your plans, priorities and everyday moments
-          into one thoughtful digital planning space.
-        </p>
+        <p>Bring your plans, priorities and everyday moments into one thoughtful digital planning space.</p>
 
-        <a
-          href="https://payhip.com/b/fzme7"
-          class="og-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <p class="ed-price-line">RM59.90 <s>RM69.90</s><small>EARLY BIRD · FULL 2027 EDITION</small></p>
+
+        <!-- PAYHIP: Full Edition. Replace the link below if you create a separate product per edition. -->
+        <a href="https://payhip.com/b/fzme7" class="ed-button" target="_blank" rel="noopener noreferrer">
           Purchase the Full Edition <span>↗</span>
         </a>
+
+        <p class="ed-trial">Prefer a smaller beginning? <a href="https://payhip.com/b/z352C" target="_blank" rel="noopener noreferrer">Try the Trial Edition · RM19.90</a></p>
 
       </div>
 
     </section>
 
-  </main>
+    <section class="ed-main ed-others">
+      <div class="section-topline">
+        <span class="eyebrow">ALSO IN THE COLLECTION</span>
+        <span class="section-side-note">SAME PLANNER · DIFFERENT AESTHETIC</span>
+      </div>
+      <div class="ed-others-grid">
 
+          <a class="ed-other" href="minimalist.html" aria-label="View the Minimalist Edition">
+            <div class="ed-other-img" style="background:#85866A">
+              <img src="assets/products/minimalist-cover.jpg" alt="Minimalist Edition planner cover" loading="lazy" decoding="async">
+            </div>
+            <h3>Minimalist Edition</h3>
+            <p>Clean lines, considered details and room to breathe.</p>
+          </a>
 
-  <!-- FOOTER -->
+          <a class="ed-other" href="coquette.html" aria-label="View the Coquette Edition">
+            <div class="ed-other-img" style="background:#EBD8DE">
+              <img src="assets/products/coquette-cover.jpg" alt="Coquette Edition planner cover" loading="lazy" decoding="async">
+            </div>
+            <h3>Coquette Edition</h3>
+            <p>Soft details and a little everyday romance.</p>
+          </a>
 
-  <footer class="og-footer">
-
-    <div class="og-footer-inner">
-
-      <a href="index.html" class="og-footer-brand">DEAR CHAPTERS</a>
-
-      <p class="og-footer-tagline">Make room for every chapter.</p>
-
-      <div class="og-socials">
-
-        <!-- THREADS -->
-        <a
-          href="https://www.threads.net/@dearchapters.co"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Dear Chapters on Threads"
-          class="og-social-link"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/>
-          </svg>
-          <span>Threads</span>
-        </a>
-
-        <!-- INSTAGRAM -->
-        <a
-          href="https://www.instagram.com/dearchapters.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Dear Chapters on Instagram"
-          class="og-social-link"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
-            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
-            <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
-          </svg>
-          <span>Instagram</span>
-        </a>
-
-        <!-- EMAIL -->
-        <a
-          href="mailto:dearchapters.co@gmail.com"
-          aria-label="Email Dear Chapters"
-          class="og-social-link"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
-            <path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Email</span>
-        </a>
+          <a class="ed-other" href="luxury.html" aria-label="View the Luxury Edition">
+            <div class="ed-other-img" style="background:#D9CDBD">
+              <img src="assets/products/luxury-cover.jpg" alt="Luxury Edition planner cover" loading="lazy" decoding="async">
+            </div>
+            <h3>Luxury Edition</h3>
+            <p>Rich, polished and quietly sophisticated.</p>
+          </a>
 
       </div>
+    </section>
 
-      <a href="mailto:dearchapters.co@gmail.com" class="og-footer-email">
-        dearchapters.co@gmail.com
-      </a>
+  </main>
 
-      <p class="og-footer-copyright">
-        © 2026 Dear Chapters. All rights reserved.
-      </p>
+  <footer class="ed-footer">
 
-      <a href="index.html" class="og-footer-back">
-        ← Back to the collection
-      </a>
+    <div class="ed-footer-inner">
+
+      <a href="index.html" class="ed-footer-brand">DEAR CHAPTERS</a>
+
+      <p class="ed-footer-tagline">Make room for every chapter.</p>
+
+      <div class="ed-socials">
+        <a href="https://www.threads.net/@dearchapters.co" target="_blank" rel="noopener noreferrer" aria-label="Visit Dear Chapters on Threads" class="ed-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/></svg>
+          <span>Threads</span></a>
+        <a href="https://www.instagram.com/dearchapters.co/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dear Chapters on Instagram" class="ed-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/></svg>
+          <span>Instagram</span></a>
+        <a href="mailto:dearchapters.co@gmail.com" aria-label="Email Dear Chapters" class="ed-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Email</span></a>
+      </div>
+
+      <a href="mailto:dearchapters.co@gmail.com" class="ed-footer-email">dearchapters.co@gmail.com</a>
+
+      <p class="ed-footer-copyright">© 2026 Dear Chapters. All rights reserved. Digital product · Personal use only.</p>
+
+      <a href="index.html" class="ed-footer-back">← Back to the collection</a>
 
     </div>
 
   </footer>
 
-
-  <!-- MOBILE NAVIGATION -->
-
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
-
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener("click", () => {
-        const isOpen = mainNav.classList.toggle("active");
-        menuToggle.setAttribute("aria-expanded", isOpen);
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

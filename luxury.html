@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,509 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Luxury Edition — Dear Chapters</title>
-  <meta name="description" content="Discover the Dear Chapters Luxury Edition — an elevated digital planner with refined details for every chapter of your life.">
+  <meta name="description" content="Discover the Dear Chapters Luxury Edition: an elevated digital planner with refined details for every chapter of your life.">
   <meta name="theme-color" content="#F5F0E9">
+  <link rel="canonical" href="https://dearchapters.github.io/dear-chapters-website/luxury.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Luxury Edition — Dear Chapters">
+  <meta property="og:description" content="Discover the Dear Chapters Luxury Edition: an elevated digital planner with refined details for every chapter of your life.">
+  <meta property="og:url" content="https://dearchapters.github.io/dear-chapters-website/luxury.html">
+  <meta property="og:site_name" content="Dear Chapters">
+  <meta property="og:image" content="https://dearchapters.github.io/dear-chapters-website/assets/products/luxury-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- Only this colour set is specific to the Luxury Edition. All layout lives in style.css. -->
   <style>
-    :root {
-      --luxury-bg: #F5F0E9;
-      --luxury-card: #FFFCF8;
-      --luxury-text: #493B3D;
-      --luxury-muted: #987C75;
-      --luxury-accent: #754C50;
-      --luxury-soft: #E9DED5;
-      --luxury-line: rgba(73, 59, 61, 0.14);
-      --luxury-cover: #D9CDBD;
-    }
-
-    body {
-      background: var(--luxury-bg);
-      color: var(--luxury-text);
-    }
-
-    .site-header {
-      background: rgba(245, 240, 233, 0.96);
-    }
-
-    .announcement {
-      background: var(--luxury-accent);
-    }
-
-    .announcement span {
-      color: var(--luxury-cover);
-    }
-
-    .luxury-main {
-      max-width: 1440px;
-      margin: auto;
-      padding: 0 7%;
-    }
-
-    .luxury-breadcrumb {
-      padding: 27px 0;
-      color: var(--luxury-muted);
-      font-size: 9px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
-
-    .luxury-breadcrumb a:hover {
-      color: var(--luxury-accent);
-    }
-
-    /* HERO */
-
-    .luxury-hero {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      align-items: center;
-      gap: 9%;
-      padding: 45px 0 100px;
-    }
-
-    .luxury-cover-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 35px;
-      background: var(--luxury-cover);
-    }
-
-    .luxury-cover {
-      width: 100%;
-      max-width: 510px;
-      max-height: 660px;
-      object-fit: contain;
-      object-position: center;
-      box-shadow: 0 20px 45px rgba(55, 40, 35, 0.12);
-    }
-
-    .luxury-cover-caption {
-      margin-top: 15px;
-      color: var(--luxury-muted);
-      font-family: var(--serif);
-      font-size: 14px;
-      font-style: italic;
-      text-align: center;
-    }
-
-    .luxury-copy .eyebrow {
-      color: var(--luxury-muted);
-    }
-
-    .luxury-copy h1 {
-      margin: 23px 0 10px;
-      color: var(--luxury-text);
-      font-family: var(--serif);
-      font-size: clamp(55px, 6vw, 82px);
-      font-weight: 400;
-      line-height: 0.95;
-      letter-spacing: -2px;
-    }
-
-    .luxury-subtitle {
-      margin: 0 0 27px;
-      color: var(--luxury-muted);
-      font-family: var(--serif);
-      font-size: 25px;
-      font-style: italic;
-    }
-
-    .luxury-description {
-      max-width: 410px;
-      color: var(--luxury-muted);
-      font-size: 11px;
-      line-height: 2.2;
-    }
-
-    .luxury-note {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 30px;
-      color: var(--luxury-muted);
-      font-size: 9px;
-      letter-spacing: 1px;
-    }
-
-    .luxury-note::before {
-      content: "";
-      width: 28px;
-      height: 1px;
-      background: var(--luxury-accent);
-    }
-
-    .luxury-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 34px;
-    }
-
-    .luxury-button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      min-height: 48px;
-      padding: 13px 22px;
-      border: 1px solid var(--luxury-accent);
-      background: var(--luxury-accent);
-      color: white !important;
-      font-size: 9px;
-      letter-spacing: 0.5px;
-      transition: 0.25s ease;
-    }
-
-    .luxury-button:hover {
-      background: var(--luxury-text);
-      border-color: var(--luxury-text);
-    }
-
-    .luxury-button-secondary {
-      background: transparent;
-      color: var(--luxury-accent) !important;
-    }
-
-    .luxury-button-secondary:hover {
-      background: var(--luxury-card);
-      color: var(--luxury-text) !important;
-    }
-
-    .luxury-divider {
-      height: 1px;
-      background: var(--luxury-line);
-    }
-
-    /* INTERIOR PREVIEWS */
-
-    .luxury-section {
-      padding: 90px 0;
-    }
-
-    .luxury-section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 30px;
-      margin-bottom: 45px;
-    }
-
-    .luxury-section-heading h2 {
-      margin: 15px 0 0;
-      color: var(--luxury-text);
-      font-family: var(--serif);
-      font-size: clamp(39px, 4.5vw, 60px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .luxury-section-heading h2 em {
-      color: var(--luxury-muted);
-      font-weight: 400;
-    }
-
-    .luxury-section-heading p {
-      max-width: 260px;
-      margin: 0;
-      color: var(--luxury-muted);
-      font-size: 10px;
-      line-height: 2;
-    }
-
-    .luxury-preview-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 45px 28px;
-    }
-
-    .luxury-preview-card {
-      min-width: 0;
-    }
-
-    .luxury-preview-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 220px;
-      padding: 18px;
-      overflow: hidden;
-      background: var(--luxury-card);
-      border: 1px solid rgba(73, 59, 61, 0.06);
-    }
-
-    .luxury-preview-image img {
-      width: 100%;
-      height: auto;
-      max-height: 480px;
-      object-fit: contain;
-      object-position: center;
-    }
-
-    .luxury-preview-caption {
-      display: flex;
-      align-items: flex-start;
-      gap: 17px;
-      padding-top: 17px;
-    }
-
-    .luxury-preview-number {
-      padding-top: 5px;
-      color: var(--luxury-muted);
-      font-family: var(--serif);
-      font-size: 18px;
-    }
-
-    .luxury-preview-caption h3 {
-      margin: 0;
-      color: var(--luxury-text);
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 400;
-    }
-
-    .luxury-preview-caption p {
-      margin: 3px 0 0;
-      color: var(--luxury-muted);
-      font-size: 10px;
-    }
-
-    /* FEATURE STRIP */
-
-    .luxury-feature-strip {
-      padding: 65px 7%;
-      background: var(--luxury-soft);
-      text-align: center;
-    }
-
-    .luxury-feature-strip h2 {
-      margin: 15px 0;
-      color: var(--luxury-text);
-      font-family: var(--serif);
-      font-size: clamp(35px, 4vw, 52px);
-      font-weight: 400;
-    }
-
-    .luxury-feature-strip h2 em {
-      color: var(--luxury-accent);
-    }
-
-    .luxury-feature-strip p {
-      max-width: 520px;
-      margin: auto;
-      color: var(--luxury-muted);
-      font-size: 10px;
-      line-height: 2.1;
-    }
-
-    /* PURCHASE */
-
-    .luxury-purchase {
-      padding: 95px 0 110px;
-      text-align: center;
-    }
-
-    .luxury-purchase h2 {
-      margin: 17px 0;
-      color: var(--luxury-text);
-      font-family: var(--serif);
-      font-size: clamp(42px, 5vw, 65px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .luxury-purchase h2 em {
-      color: var(--luxury-muted);
-    }
-
-    .luxury-purchase p {
-      max-width: 440px;
-      margin: 0 auto 25px;
-      color: var(--luxury-muted);
-      font-size: 10px;
-      line-height: 2;
-    }
-
-    /* FOOTER */
-
-    .luxury-footer {
-      padding: 38px 7%;
-      border-top: 1px solid var(--luxury-line);
-      text-align: center;
-    }
-
-    .luxury-footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      max-width: 1440px;
-      margin: auto;
-    }
-
-    .luxury-footer-brand {
-      color: var(--luxury-text) !important;
-      font-family: var(--serif);
-      font-size: 24px !important;
-      letter-spacing: 2px;
-      font-weight: 500;
-    }
-
-    .luxury-footer-tagline {
-      margin: 0;
-      color: var(--luxury-muted);
-      font-size: 9px;
-      letter-spacing: 0.7px;
-    }
-
-    .luxury-socials {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 27px;
-      margin: 18px 0 8px;
-    }
-
-    .luxury-social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: var(--luxury-muted) !important;
-      font-size: 9px !important;
-      letter-spacing: 0.7px;
-      transition: color 0.25s ease;
-    }
-
-    .luxury-social-link:hover,
-    .luxury-footer-back:hover {
-      color: var(--luxury-accent) !important;
-    }
-
-    .luxury-social-link svg {
-      display: block;
-      width: 18px;
-      height: 18px;
-    }
-
-    .luxury-footer-email {
-      color: var(--luxury-muted) !important;
-      font-size: 10px !important;
-      letter-spacing: 0.3px;
-    }
-
-    .luxury-footer-copyright {
-      margin: 12px 0 0;
-      color: var(--luxury-muted);
-      font-size: 8px;
-      letter-spacing: 0.8px;
-    }
-
-    .luxury-footer-back {
-      margin-top: 8px;
-      color: var(--luxury-muted) !important;
-      font-size: 9px !important;
-    }
-
-    @media (max-width: 430px) {
-      .luxury-socials {
-        gap: 17px;
-      }
-
-      .luxury-social-link {
-        font-size: 8px !important;
-      }
-    }
-
-    /* TABLET */
-
-    @media (max-width: 800px) {
-      .luxury-hero {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        padding: 25px 0 70px;
-      }
-
-      .luxury-cover-wrap {
-        padding: 20px;
-      }
-
-      .luxury-cover {
-        max-height: 530px;
-      }
-
-      .luxury-copy {
-        text-align: center;
-      }
-
-      .luxury-description {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .luxury-note,
-      .luxury-actions {
-        justify-content: center;
-      }
-
-      .luxury-section {
-        padding: 65px 0;
-      }
-
-      .luxury-section-heading {
-        display: block;
-      }
-
-      .luxury-section-heading p {
-        margin-top: 20px;
-      }
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 560px) {
-      .luxury-main {
-        padding: 0 5%;
-      }
-
-      .luxury-preview-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .luxury-preview-image {
-        min-height: 160px;
-        padding: 12px;
-      }
-
-      .luxury-preview-image img {
-        max-height: 380px;
-      }
-
-      .luxury-footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
+    body.theme-luxury {
+      --t-bg: #F5F0E9;
+      --t-card: #FFFCF8;
+      --t-text: #493B3D;
+      --t-muted: #7E6661;
+      --t-btn: #754C50;
+      --t-hover: #493B3D;
+      --t-em: #7E6661;
+      --t-eyebrow: #7E6661;
+      --t-link: #7E6661;
+      --t-line: rgba(73,59,61,0.16);
+      --t-soft: #E9DED5;
+      --t-cover: #D9CDBD;
+      --t-cover-shadow: 0 20px 45px rgba(55, 40, 35, 0.12);
+      --t-ann: #754C50;
+      --t-ann-span: #D9CDBD;
+      --t-header: rgba(245,240,233,0.96);
     }
   </style>
+
+  <script>document.documentElement.className += " js";</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Dear Chapters Luxury Edition: 2027 Digital Planner",
+  "description": "Discover the Dear Chapters Luxury Edition: an elevated digital planner with refined details for every chapter of your life.",
+  "image": "https://dearchapters.github.io/dear-chapters-website/assets/products/luxury-cover.jpg",
+  "brand": {
+    "@type": "Brand",
+    "name": "Dear Chapters"
+  },
+  "url": "https://dearchapters.github.io/dear-chapters-website/luxury.html",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://payhip.com/b/fzme7",
+    "priceCurrency": "MYR",
+    "price": "59.90",
+    "availability": "https://schema.org/InStock"
+  }
+}
+  </script>
 </head>
 
-<body>
+<body class="edition theme-luxury">
 
-  <!-- ANNOUNCEMENT -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="announcement">
     THE 2027 COLLECTION <span>✳</span> MAKE ROOM FOR EVERY CHAPTER
   </div>
-
-
-  <!-- HEADER -->
 
   <header class="site-header">
     <div class="header-inner">
@@ -536,14 +106,11 @@
     </div>
   </header>
 
+  <main id="main">
 
-  <main>
+    <div class="ed-main">
 
-    <div class="luxury-main">
-
-      <!-- BREADCRUMB -->
-
-      <div class="luxury-breadcrumb">
+      <div class="ed-breadcrumb">
         <a href="index.html">Home</a>
         &nbsp; / &nbsp;
         <a href="index.html#editions">The Collection</a>
@@ -551,187 +118,96 @@
         Luxury Edition
       </div>
 
-
-      <!-- LUXURY HERO -->
-
-      <section class="luxury-hero">
+      <section class="ed-hero">
 
         <div>
-          <div class="luxury-cover-wrap">
-            <img
-              class="luxury-cover"
-              src="assets/products/luxury-cover.jpg"
-              alt="Dear Chapters Luxury Edition digital planner cover"
-            >
+          <div class="ed-cover-wrap">
+            <img class="ed-cover" src="assets/products/luxury-cover.jpg" alt="Dear Chapters Luxury Edition digital planner cover" fetchpriority="high">
           </div>
-
-          <p class="luxury-cover-caption">
-            A refined space for every part of your life.
-          </p>
+          <p class="ed-cover-caption">A refined space for every part of your life.</p>
         </div>
 
-
-        <div class="luxury-copy">
-
-          <span class="eyebrow">
-            04 / THE LUXURY EDITION
-          </span>
-
+        <div class="ed-copy">
+          <span class="eyebrow">04 / THE LUXURY EDITION</span>
           <h1>Luxury<br>Edition.</h1>
+          <p class="ed-subtitle">The Elevated Edition</p>
+          <p class="ed-description">A refined space for every part of your life. Designed with thoughtful details, elegant tones and a sense of quiet sophistication, the Luxury Edition brings intention and clarity to your everyday planning.</p>
+          <div class="ed-note">WARM NEUTRALS · A REFINED EVERYDAY</div>
 
-          <p class="luxury-subtitle">
-            The Elevated Edition
-          </p>
-
-          <p class="luxury-description">
-            A refined space for every part of your life.
-            Designed with thoughtful details, elegant tones and
-            a sense of quiet sophistication, the Luxury Edition
-            brings intention and clarity to your everyday planning.
-          </p>
-
-          <div class="luxury-note">
-            WARM NEUTRALS · A REFINED EVERYDAY
+          <div class="ed-actions">
+            <a href="#previews" class="ed-button">Explore the pages <span>↓</span></a>
+            <a href="index.html#editions" class="ed-button ed-button-secondary">All editions <span>↗</span></a>
           </div>
-
-          <div class="luxury-actions">
-
-            <a href="#previews" class="luxury-button">
-              Explore the pages <span>↓</span>
-            </a>
-
-            <a href="index.html#editions" class="luxury-button luxury-button-secondary">
-              All editions <span>↗</span>
-            </a>
-
-          </div>
-
         </div>
 
       </section>
 
+      <div class="ed-divider"></div>
 
-      <div class="luxury-divider"></div>
-
-
-      <!-- INTERIOR PREVIEWS -->
-
-      <section class="luxury-section" id="previews">
+      <section class="ed-section" id="previews">
 
         <div class="section-topline">
           <span class="eyebrow">04 / INSIDE THE LUXURY EDITION</span>
           <span class="section-side-note">A CLOSER LOOK AT THE PAGES</span>
         </div>
 
-        <div class="luxury-section-heading">
-
-          <div>
-            <h2>Thoughtfully designed<br>for <em>your everyday.</em></h2>
-          </div>
-
-          <p>
-            Explore a selection of the pages
-            that make up the Luxury planning experience.
-          </p>
-
+        <div class="ed-heading" style="margin-top:45px">
+          <div><h2>Thoughtfully designed<br>for <em>your everyday.</em></h2></div>
+          <p>Explore a selection of the pages that make up the Luxury planning experience.</p>
         </div>
 
+        <div class="ed-grid">
 
-        <div class="luxury-preview-grid">
-
-          <!-- START -->
-
-          <article class="luxury-preview-card">
-
-            <div class="luxury-preview-image">
-              <img
-                src="assets/products/start-lux.jpg"
-                alt="Luxury Edition Start planner pages"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/start-lux.jpg" alt="Luxury Edition Start planner pages" loading="lazy" decoding="async">
             </div>
-
-            <div class="luxury-preview-caption">
-              <span class="luxury-preview-number">01</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">01</span>
               <div>
                 <h3>Start</h3>
                 <p>A space to organise your priorities and intentions.</p>
               </div>
             </div>
-
           </article>
 
-
-          <!-- SUNNAH -->
-
-          <article class="luxury-preview-card">
-
-            <div class="luxury-preview-image">
-              <img
-                src="assets/products/sunnah-lux.jpg"
-                alt="Luxury Edition Sunnah section"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/sunnah-lux.jpg" alt="Luxury Edition Sunnah section" loading="lazy" decoding="async">
             </div>
-
-            <div class="luxury-preview-caption">
-              <span class="luxury-preview-number">02</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">02</span>
               <div>
                 <h3>Sunnah</h3>
                 <p>Make space for spiritual routines and daily practice.</p>
               </div>
             </div>
-
           </article>
 
-
-          <!-- REFLECTION -->
-
-          <article class="luxury-preview-card">
-
-            <div class="luxury-preview-image">
-              <img
-                src="assets/products/reflection-lux.jpg"
-                alt="Luxury Edition Reflection section"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/reflection-lux.jpg" alt="Luxury Edition Reflection section" loading="lazy" decoding="async">
             </div>
-
-            <div class="luxury-preview-caption">
-              <span class="luxury-preview-number">03</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">03</span>
               <div>
                 <h3>Reflection</h3>
                 <p>Pause, reflect and reconnect with yourself.</p>
               </div>
             </div>
-
           </article>
 
-
-          <!-- MEDICATION -->
-
-          <article class="luxury-preview-card">
-
-            <div class="luxury-preview-image">
-              <img
-                src="assets/products/medication-lux.jpg"
-                alt="Luxury Edition Medication section"
-                loading="lazy"
-              >
+          <article class="ed-card">
+            <div class="ed-card-image">
+              <img src="assets/products/medication-lux.jpg" alt="Luxury Edition Medication section" loading="lazy" decoding="async">
             </div>
-
-            <div class="luxury-preview-caption">
-              <span class="luxury-preview-number">04</span>
-
+            <div class="ed-card-caption">
+              <span class="ed-card-number">04</span>
               <div>
                 <h3>Medication</h3>
                 <p>Keep track of your medication and health routines.</p>
               </div>
             </div>
-
           </article>
 
         </div>
@@ -740,148 +216,102 @@
 
     </div>
 
-
-    <!-- FEATURE STRIP -->
-
-    <section class="luxury-feature-strip">
-
+    <section class="ed-strip">
       <span class="eyebrow">MADE FOR EVERY CHAPTER OF YOU</span>
-
       <h2>One planner.<br><em>Every chapter.</em></h2>
-
-      <p>
-        The Luxury Edition shares the same thoughtfully
-        designed planning system and features as our
-        Signature, Minimalist and Coquette editions.
-        Choose the aesthetic that feels most like you.
-      </p>
-
+      <p>The Luxury Edition shares the same thoughtfully designed planning system and features as our Signature, Minimalist and Coquette editions. Choose the aesthetic that feels most like you.</p>
     </section>
 
+    <section class="ed-main">
 
-    <!-- PURCHASE -->
-
-    <section class="luxury-main">
-
-      <div class="luxury-purchase" id="purchase">
+      <div class="ed-purchase" id="purchase">
 
         <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
 
         <h2>Make room for<br><em>what matters.</em></h2>
 
-        <p>
-          Bring your plans, priorities and everyday moments
-          into one thoughtful digital planning space.
-        </p>
+        <p>Bring your plans, priorities and everyday moments into one thoughtful digital planning space.</p>
 
-        <a
-          href="https://payhip.com/b/fzme7"
-          class="luxury-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <p class="ed-price-line">RM59.90 <s>RM69.90</s><small>EARLY BIRD · FULL 2027 EDITION</small></p>
+
+        <!-- PAYHIP: Full Edition. Replace the link below if you create a separate product per edition. -->
+        <a href="https://payhip.com/b/fzme7" class="ed-button" target="_blank" rel="noopener noreferrer">
           Purchase the Full Edition <span>↗</span>
         </a>
+
+        <p class="ed-trial">Prefer a smaller beginning? <a href="https://payhip.com/b/z352C" target="_blank" rel="noopener noreferrer">Try the Trial Edition · RM19.90</a></p>
 
       </div>
 
     </section>
 
-  </main>
+    <section class="ed-main ed-others">
+      <div class="section-topline">
+        <span class="eyebrow">ALSO IN THE COLLECTION</span>
+        <span class="section-side-note">SAME PLANNER · DIFFERENT AESTHETIC</span>
+      </div>
+      <div class="ed-others-grid">
 
+          <a class="ed-other" href="og.html" aria-label="View the Signature Edition">
+            <div class="ed-other-img" style="background:#A85F70">
+              <img src="assets/products/og-cover.jpg" alt="Signature Edition planner cover" loading="lazy" decoding="async">
+            </div>
+            <h3>Signature Edition</h3>
+            <p>Warm, timeless and unmistakably Dear Chapters.</p>
+          </a>
 
-  <!-- FOOTER -->
+          <a class="ed-other" href="minimalist.html" aria-label="View the Minimalist Edition">
+            <div class="ed-other-img" style="background:#85866A">
+              <img src="assets/products/minimalist-cover.jpg" alt="Minimalist Edition planner cover" loading="lazy" decoding="async">
+            </div>
+            <h3>Minimalist Edition</h3>
+            <p>Clean lines, considered details and room to breathe.</p>
+          </a>
 
-  <footer class="luxury-footer">
-
-    <div class="luxury-footer-inner">
-
-      <a href="index.html" class="luxury-footer-brand">DEAR CHAPTERS</a>
-
-      <p class="luxury-footer-tagline">Make room for every chapter.</p>
-
-      <div class="luxury-socials">
-
-        <!-- THREADS -->
-
-        <a
-          href="https://www.threads.net/@dearchapters.co"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Dear Chapters on Threads"
-          class="luxury-social-link"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/>
-          </svg>
-          <span>Threads</span>
-        </a>
-
-
-        <!-- INSTAGRAM -->
-
-        <a
-          href="https://www.instagram.com/dearchapters.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit Dear Chapters on Instagram"
-          class="luxury-social-link"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
-            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
-            <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
-          </svg>
-          <span>Instagram</span>
-        </a>
-
-
-        <!-- EMAIL -->
-
-        <a
-          href="mailto:dearchapters.co@gmail.com"
-          aria-label="Email Dear Chapters"
-          class="luxury-social-link"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
-            <path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Email</span>
-        </a>
+          <a class="ed-other" href="coquette.html" aria-label="View the Coquette Edition">
+            <div class="ed-other-img" style="background:#EBD8DE">
+              <img src="assets/products/coquette-cover.jpg" alt="Coquette Edition planner cover" loading="lazy" decoding="async">
+            </div>
+            <h3>Coquette Edition</h3>
+            <p>Soft details and a little everyday romance.</p>
+          </a>
 
       </div>
+    </section>
 
-      <a href="mailto:dearchapters.co@gmail.com" class="luxury-footer-email">
-        dearchapters.co@gmail.com
-      </a>
+  </main>
 
-      <p class="luxury-footer-copyright">
-        © 2026 Dear Chapters. All rights reserved.
-      </p>
+  <footer class="ed-footer">
 
-      <a href="index.html" class="luxury-footer-back">
-        ← Back to the collection
-      </a>
+    <div class="ed-footer-inner">
+
+      <a href="index.html" class="ed-footer-brand">DEAR CHAPTERS</a>
+
+      <p class="ed-footer-tagline">Make room for every chapter.</p>
+
+      <div class="ed-socials">
+        <a href="https://www.threads.net/@dearchapters.co" target="_blank" rel="noopener noreferrer" aria-label="Visit Dear Chapters on Threads" class="ed-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.1 2.2c-5.4 0-8.8 3.8-8.8 9.8 0 6.3 3.2 9.8 8.7 9.8 4.9 0 8-2.8 8-7.1 0-3.5-2.1-5.7-5.6-6.2-.3-2.4-1.8-3.7-4.1-3.7-2.5 0-4.2 1.5-4.2 3.7 0 2.1 1.6 3.4 4.2 3.4 1.5 0 2.8-.5 3.8-1.3.7.7 1.1 1.7 1.1 3 0 2.6-1.9 4.3-5 4.3-3.5 0-5.4-2.1-5.4-6.1 0-4.5 2.1-7 5.8-7 2.1 0 3.5.8 4.4 2.5l2-.9c-1.2-2.8-3.7-4.2-7-4.2Zm-.9 7.7c-1.5 0-2.3-.5-2.3-1.5 0-1.1.9-1.8 2.4-1.8 1.3 0 2.1.7 2.3 2.1-.7.8-1.5 1.2-2.4 1.2Z"/></svg>
+          <span>Threads</span></a>
+        <a href="https://www.instagram.com/dearchapters.co/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dear Chapters on Instagram" class="ed-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/></svg>
+          <span>Instagram</span></a>
+        <a href="mailto:dearchapters.co@gmail.com" aria-label="Email Dear Chapters" class="ed-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Email</span></a>
+      </div>
+
+      <a href="mailto:dearchapters.co@gmail.com" class="ed-footer-email">dearchapters.co@gmail.com</a>
+
+      <p class="ed-footer-copyright">© 2026 Dear Chapters. All rights reserved. Digital product · Personal use only.</p>
+
+      <a href="index.html" class="ed-footer-back">← Back to the collection</a>
 
     </div>
 
   </footer>
 
-
-  <!-- MOBILE NAVIGATION -->
-
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
-
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener("click", () => {
-        const isOpen = mainNav.classList.toggle("active");
-        menuToggle.setAttribute("aria-expanded", isOpen);
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

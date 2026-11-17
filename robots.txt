@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dearchapters.github.io/dear-chapters-website/sitemap.xml
