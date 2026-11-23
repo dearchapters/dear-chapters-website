@@ -150,8 +150,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fill in the two values below after following supabase/SETUP.md.
   // The anon key is safe to publish: the database only lets visitors add a signup, never read the list.
   const SUBSCRIBE_CONFIG = {
-    supabaseUrl: "",      // e.g. "https://abcdxyz.supabase.co"
-    supabaseAnonKey: ""   // the "anon public" key from Supabase > Project Settings > API
+    supabaseUrl: "https://jnefsvstpljbrrdrffhb.supabase.co",
+    supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZWZzdnN0cGxqYnJyZHJmZmhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU0MDQ1OTIsImV4cCI6MjExMDk4MDU5Mn0.7JlOl2UveYvfXFAkiZwPq4IaG9kpAwJxzKptvAgt3Io"
   };
 
   const subForm = document.querySelector("#subscribe-form");
