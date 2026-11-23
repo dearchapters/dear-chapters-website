@@ -2622,3 +2622,69 @@ body.edition {
   .subscribe-inner { grid-template-columns: 1fr; gap: 40px; }
   .subscribe-form { padding: 26px 20px; }
 }
+
+
+/* ---------------------------------------------------------
+   DRAWN ICONS (replace text glyphs that phones show as emoji)
+   --------------------------------------------------------- */
+
+.arr {
+  width: 18px;
+  height: 11px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.star {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.announcement .star { color: var(--blush); }
+.collection-note .star { width: 14px; height: 14px; color: var(--burgundy); }
+.edition-arrow .arr,
+.underlined-link .arr { width: 14px; height: 9px; }
+.underlined-link .arr { margin-left: 6px; vertical-align: baseline; }
+.price-featured .price-index { color: rgba(245, 240, 233, 0.7); }
+
+
+/* ---------------------------------------------------------
+   PHONE POLISH
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  /* header: just the name and the menu button */
+  .nav-cta { display: none; }
+  .buy-bar .button { white-space: nowrap; gap: 12px; }
+}
+
+@media (max-width: 650px) {
+  .section-pad { padding-top: 64px; padding-bottom: 64px; }
+  .section-side-note { display: none; }
+  .section-topline { padding-bottom: 14px; }
+
+  /* editions: one large cover per row instead of tiny covers in tall boxes */
+  .edition-grid { grid-template-columns: 1fr; gap: 36px; }
+  .edition-image { min-height: 0; padding: 0; aspect-ratio: 3 / 2; }
+  .edition-image img { height: 100%; max-height: none; aspect-ratio: auto; object-fit: cover; }
+  .edition-image-number { display: none; }
+  .edition-card:hover .edition-image img { transform: none; }
+  .edition-arrow { width: 36px; height: 36px; }
+
+  /* pricing card header */
+  .price-card-top { flex-wrap: wrap; row-gap: 10px; }
+  .price-index { display: flex; align-items: center; white-space: nowrap; }
+  .price-card { min-height: 0; padding: 28px 24px; }
+
+  /* subscribe form */
+  .subscribe-status { min-height: 0; }
+}
