@@ -35,12 +35,20 @@ Carousel (16:10, about 1280 x 800 px): `wellness-preview.jpg`, `self-preview.jpg
 
 If an image is missing, the site shows a soft placeholder instead of a broken icon. Tip: keep each image under about 300 KB (export as JPG at 80 to 85% quality) so pages load quickly on phones.
 
-## Checkout links (Payhip)
+## Coming soon mode (payments paused)
+
+Payments are paused while payment verification is pending. The site shows "Coming soon" in place of the buy buttons, and a subscribe form (`#subscribe` on the home page) collects emails for the launch and the weekly love letter. Setup for the subscriber database is in `supabase/SETUP.md` and `supabase/schema.sql`.
+
+### Turning purchases back on
+
+Search for `PAUSED` in `index.html` and each edition page. Each one marks a spot where a checkout link was removed. Put the original link back and delete the "Coming soon" markup next to it:
 
 - Full Edition: `https://payhip.com/b/fzme7` (home page and all four edition pages)
-- Trial Edition: `https://payhip.com/b/z352C`
+- Trial Edition: `https://payhip.com/b/z352C` (home page only; the edition pages used to link to it under the main button)
 
-All four edition pages currently use the same Full Edition link. Each button has an HTML comment above it saying `PAYHIP`. If you create a separate Payhip product for each edition, replace the link on that edition's page only.
+On each edition page, also restore the price line, the button text ("Purchase the Full Edition") and the trial line. The simplest way is to look at the earlier version of the file in the repository's commit history. Also remove the announcement bar's "COMING SOON" wording and change the sticky mobile bar back to the price.
+
+If you create a separate product per edition, give each edition page its own link.
 
 ## Things to update later
 
@@ -54,5 +62,6 @@ All four edition pages currently use the same Full Edition link. Each button has
 - [ ] Upload all product images listed above
 - [ ] Open every page on a phone and a laptop
 - [ ] Test the mobile menu on all five pages
-- [ ] Click every Payhip button and complete a test purchase
+- [ ] Connect the subscriber database (`supabase/SETUP.md`) and test the form
+- [ ] When payments are verified: restore the checkout links, click every one and complete a test purchase
 - [ ] Confirm prices, product contents and personal-use terms

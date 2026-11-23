@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // STICKY MOBILE BUY BAR: show after the hero, hide while pricing is on screen
   const buyBar = document.querySelector(".buy-bar");
   const hero = document.querySelector(".hero");
-  const pricing = document.querySelector("#pricing");
+  const pricing = document.querySelector("#subscribe");
 
   if (buyBar && hero && "IntersectionObserver" in window) {
     let heroGone = false;
@@ -144,6 +144,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
     new IntersectionObserver(([e]) => { heroGone = !e.isIntersecting; update(); }, { threshold: 0 }).observe(hero);
     if (pricing) new IntersectionObserver(([e]) => { pricingVisible = e.isIntersecting; update(); }, { threshold: 0.05 }).observe(pricing);
+  }
+
+  // SUBSCRIBE FORM: saves signups to the Supabase `subscribers` table.
+  // Fill in the two values below after following supabase/SETUP.md.
+  // The anon key is safe to publish: the database only lets visitors add a signup, never read the list.
+  const SUBSCRIBE_CONFIG = {
+    supabaseUrl: "",      // e.g. "https://abcdxyz.supabase.co"
+    supabaseAnonKey: ""   // the "anon public" key from Supabase > Project Settings > API
+  };
+
+  const subForm = document.querySelector("#subscribe-form");
+
+  if (subForm) {
+    const statusEl = subForm.querySelector(".subscribe-status");
+    const submitBtn = subForm.querySelector("button[type='submit']");
+    const say = (msg, kind) => {
+      statusEl.textContent = msg;
+      statusEl.className = "subscribe-status" + (kind ? " is-" + kind : "");
+    };
+
+    subForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = new FormData(subForm);
+      if (data.get("company")) { say("Thank you! You are on the list.", "ok"); return; } // spam trap
+
+      const email = String(data.get("email") || "").trim().toLowerCase();
+      const name = String(data.get("name") || "").trim();
+      const wantsLaunch = data.get("wants_launch") === "on";
+      const wantsLetter = data.get("wants_love_letter") === "on";
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { say("Please enter a valid email address.", "error"); return; }
+      if (!wantsLaunch && !wantsLetter) { say("Please choose at least one thing to receive.", "error"); return; }
+
+      const { supabaseUrl, supabaseAnonKey } = SUBSCRIBE_CONFIG;
+
+      // Not connected yet: fall back to a pre-filled email so no signup is lost.
+      if (!supabaseUrl || !supabaseAnonKey) {
+        const lines = [
+          "Please add me to the Dear Chapters list.", "",
+          "Name: " + (name || "-"),
+          "Email: " + email,
+          "Planner launch updates: " + (wantsLaunch ? "yes" : "no"),
+          "Weekly love letter: " + (wantsLetter ? "yes" : "no")
+        ];
+        window.location.href = "mailto:dearchapters.co@gmail.com?subject=" +
+          encodeURIComponent("Join the Dear Chapters list") + "&body=" + encodeURIComponent(lines.join("\n"));
+        say("Opening your email app. Please press send to join the list.", "ok");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      say("Adding you to the list...", "");
+
+      try {
+        const res = await fetch(supabaseUrl.replace(/\/$/, "") + "/rest/v1/subscribers", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": supabaseAnonKey,
+            "Authorization": "Bearer " + supabaseAnonKey,
+            "Prefer": "return=minimal"
+          },
+          body: JSON.stringify({
+            email,
+            name: name || null,
+            wants_launch: wantsLaunch,
+            wants_love_letter: wantsLetter,
+            source: location.pathname.split("/").pop() || "index.html"
+          })
+        });
+
+        if (res.ok) {
+          subForm.reset();
+          subForm.querySelectorAll("input[type='checkbox']").forEach(c => { c.checked = true; });
+          say("Thank you! You are on the list. We will be in touch soon.", "ok");
+        } else if (res.status === 409) {
+          say("Lovely, you are already on the list.", "ok");
+        } else {
+          say("Something went wrong. Please try again, or email dearchapters.co@gmail.com.", "error");
+        }
+      } catch (err) {
+        say("We could not connect. Please try again in a moment.", "error");
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
   }
 
   // MISSING IMAGES: show a soft placeholder instead of a broken icon

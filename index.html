@@ -48,7 +48,7 @@
 
   <!-- ANNOUNCEMENT -->
   <div class="announcement">
-    THE 2027 COLLECTION <span>✳</span> MAKE ROOM FOR EVERY CHAPTER
+    THE 2027 COLLECTION <span>✳</span> COMING SOON · JOIN THE LIST
   </div>
 
   <!-- HEADER -->
@@ -67,8 +67,8 @@
         <a href="#faq">FAQs</a>
       </nav>
 
-      <a href="#pricing" class="nav-cta">
-        Find your planner <span>↗</span>
+      <a href="#subscribe" class="nav-cta">
+        Join the list <span>↗</span>
       </a>
 
       <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -396,8 +396,8 @@
             together in one digital space.
           </p>
 
-          <a href="#pricing" class="underlined-link">
-            Explore the full edition ↗
+          <a href="#subscribe" class="underlined-link">
+            Get notified when it launches ↗
           </a>
         </div>
 
@@ -470,7 +470,7 @@
 
       <div class="pricing-heading">
         <h2>Choose your way<br><em>into 2027.</em></h2>
-        <p>Start with the full experience or try a smaller beginning.</p>
+        <p>Purchasing is opening very soon. Here is a preview of what is coming.</p>
       </div>
 
       <div class="pricing-grid">
@@ -501,10 +501,8 @@
             <li>Complete yearly planning experience</li>
           </ul>
 
-          <!-- PAYHIP: Full Edition. Replace the link below if you create a separate product per edition. -->
-          <a href="https://payhip.com/b/fzme7" class="button button-light" target="_blank" rel="noopener noreferrer">
-            Choose your edition <span>↗</span>
-          </a>
+          <!-- PAUSED: payment link removed while payment verification is pending.  Original links are listed in README.md -->
+          <span class="button button-light is-soon" aria-disabled="true">Coming soon</span>
         </article>
 
         <article class="price-card price-trial">
@@ -533,10 +531,8 @@
             <li>Upgrade to the Full Edition for RM44.90</li>
           </ul>
 
-          <!-- PAYHIP: Trial Edition -->
-          <a href="https://payhip.com/b/z352C" class="button button-outline" target="_blank" rel="noopener noreferrer">
-            Start with the trial <span>↗</span>
-          </a>
+          <!-- PAUSED: payment link removed while payment verification is pending.  Original links are listed in README.md -->
+          <span class="button button-outline is-soon" aria-disabled="true">Coming soon</span>
 
           <p class="trial-total">Trial + upgrade: RM64.80</p>
         </article>
@@ -544,9 +540,73 @@
       </div>
 
       <p class="pricing-note">
-        The Full Edition is RM59.90 during early bird pricing.
-        Purchasing it directly is RM4.90 less than buying the Trial Edition and upgrading later.
+        Purchasing is not open yet. Join the list below and we will email you the moment the planner is ready.
       </p>
+
+    </section>
+
+    <!-- SUBSCRIBE / COMING SOON -->
+    <section class="subscribe section-pad" id="subscribe">
+
+      <div class="section-topline">
+        <span class="eyebrow">COMING SOON</span>
+        <span class="section-side-note">BE THE FIRST TO KNOW</span>
+      </div>
+
+      <div class="subscribe-inner">
+
+        <div class="subscribe-copy">
+          <h2>The planner is<br><em>almost ready.</em></h2>
+          <p>
+            Purchasing opens very soon. Leave your email and we will write to you the moment
+            the 2027 planner is ready.
+          </p>
+          <p>
+            You can also receive a weekly love letter from Dear Chapters: a few gentle words
+            to begin your week.
+          </p>
+        </div>
+
+        <form class="subscribe-form" id="subscribe-form" novalidate>
+
+          <label class="field">
+            <span>Your name <em>(optional)</em></span>
+            <input type="text" name="name" autocomplete="given-name" maxlength="80">
+          </label>
+
+          <label class="field">
+            <span>Email address</span>
+            <input type="email" name="email" required autocomplete="email" maxlength="200" placeholder="you@example.com">
+          </label>
+
+          <fieldset class="choices">
+            <legend>What would you like to receive?</legend>
+            <label class="check">
+              <input type="checkbox" name="wants_launch" checked>
+              <span>Tell me when the planner is ready</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="wants_love_letter" checked>
+              <span>Send me the weekly love letter</span>
+            </label>
+          </fieldset>
+
+          <!-- spam trap: real visitors never see or fill this in -->
+          <div class="hp" aria-hidden="true">
+            <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <button type="submit" class="button button-dark">Join the list <span>↗</span></button>
+
+          <p class="subscribe-status" role="status" aria-live="polite"></p>
+
+          <p class="subscribe-fine">
+            No spam. You can unsubscribe at any time. By subscribing you agree to receive emails from Dear Chapters.
+          </p>
+
+        </form>
+
+      </div>
 
     </section>
 
@@ -639,6 +699,11 @@
         </div>
 
         <div class="faq-list">
+
+          <details>
+            <summary>When can I buy the planner?<span>＋</span></summary>
+            <p>Purchasing opens very soon. Join the list above and we will email you the moment the planner is ready. You can also choose to receive the weekly love letter.</p>
+          </details>
 
           <details>
             <summary>Is this a physical planner?<span>＋</span></summary>
@@ -752,12 +817,12 @@
   </footer>
 
   <!-- STICKY MOBILE BUY BAR -->
-  <div class="buy-bar" aria-label="Quick purchase">
+  <div class="buy-bar" aria-label="Join the launch list">
     <div class="buy-bar-text">
-      <small>EARLY BIRD</small>
-      <strong>Full Edition · RM59.90</strong>
+      <small>COMING SOON</small>
+      <strong>Dear Chapters 2027 Planner</strong>
     </div>
-    <a href="#pricing" class="button">Choose <span>↗</span></a>
+    <a href="#subscribe" class="button">Notify me <span>↗</span></a>
   </div>
 
   <script src="script.js"></script>
