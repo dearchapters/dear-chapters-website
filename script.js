@@ -204,7 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
           headers: {
             "Content-Type": "application/json",
             "apikey": supabaseAnonKey,
-            "Authorization": "Bearer " + supabaseAnonKey,
+            // older "anon" keys (start with eyJ) are also sent as a bearer token; newer "publishable" keys are not
+            ...(supabaseAnonKey.startsWith("eyJ") ? { "Authorization": "Bearer " + supabaseAnonKey } : {}),
             "Prefer": "return=minimal"
           },
           body: JSON.stringify({
